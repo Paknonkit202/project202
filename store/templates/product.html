@@ -1,0 +1,981 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Our Product</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        /* ---------- Desktop ---------- */
+        html,
+        body {
+            background-image: url("https://media.discordapp.net/attachments/821748947684294709/832246921280094228/pic1.png?width=448&height=664"), url("https://cdn.discordapp.com/attachments/821748947684294709/832246924232622120/pic2.png"), url("https://cdn.discordapp.com/attachments/821748947684294709/832246928406085653/pic3.png");
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-position: right top, left center, left bottom;
+            background-position: none, 0px 0px, 0px 0px;
+            background-color: #EFE2D4;
+            background-size: 60%, 20%, 40%;
+        }
+        body {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 80px 1fr 190px;
+            grid-template-areas:
+                'nav'
+                'contact'
+                'footer';
+        }
+        nav {
+            grid-area: nav;
+            position: fixed;
+        }
+        section {
+            grid-area: contact;
+        }
+        footer {
+            grid-area: footer;
+        }
+        .logo img {
+            height: 2.5rem;
+            margin-top: 1.2rem;
+        }
+        nav {
+            background: #73806C;
+            height: 80px;
+            width: 100%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            margin-left: 50px;
+        }
+        .list {
+            float: right;
+            margin-right: 20px;
+        }
+        .list li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        .list li a {
+            color: white;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            font-family: Didact Gothic;
+            font-weight: 400;
+        }
+        .show-dt:hover {
+            background: white;
+            transition: .5s;
+            border-radius: 20px;
+            color: black;
+        }
+        #check {
+            display: none;
+        }
+        .logo a:hover {
+            background: none;
+        }
+        .list .show-mb {
+            display: none;
+        }
+        li p {
+            font-family: 'Judson', serif;
+            font-size: 32px;
+            color: white;
+            font-weight: 700;
+        }
+        .line1 {
+            margin-top: 2rem;
+            width: 144px;
+            border: 1px white solid;
+        }
+        .iconhead {
+            display: none;
+        }
+        .container {
+            margin-top: 50px;
+            font-family: Judson;
+            font-style: normal;
+            font-weight: bold;
+            /* font-size: 71px; */
+            line-height: 83px;
+            /* display: block; */
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            box-sizing: content-box;
+            color: #5B3312;
+        }
+        .text2 {
+            font-size: 42px;
+            text-align: center;
+            justify-content: center;
+            font-weight: normal;
+            margin-top: 3%;
+        }
+        .flexbox {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .item {
+            display: block;
+            box-sizing: border-box;
+            width: 33.33%;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 40px;
+        }
+        .content {
+            background-color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            border: 0px solid black;
+            transition: box-shadow 0.3s;
+        }
+        .weight {
+            font-family: Didact Gothic;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #5B3312;
+            justify-content: center;
+        }
+        .price {
+            font-family: Judson;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #5B3312;
+            justify-content: center;
+            padding-bottom: 0.5cm;
+        }
+        .image {
+            border-radius: 20px;
+        }
+        .text3 {
+            font-size: 42px;
+            text-align: center;
+            justify-content: center;
+            font-weight: normal;
+            margin-top: 50px;
+        }
+        .content:hover {
+            box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+        }
+
+        /* ==========Footer========== */
+        .footer {
+            margin-top: 100px;
+            background: #73806C;
+            height: 150px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo-footer {
+            float: left;
+            margin-left: 5%;
+        }
+        .logo-footer img {
+            width: 160px;
+            margin: 2.6rem 0px 0px 0px;
+        }
+        .detail-footer {
+            display: inline-flex;
+            line-height: 32px;
+            align-items: center;
+            padding-left: 50px;
+        }
+        .detail-footer p {
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: left;
+            color: white;
+        }
+        .icon-footer {
+            float: right;
+            /* border: 1px solid blue; */
+            display: flex;
+        }
+        .icon-footer ul {
+            display: flex;
+            align-items: flex-end;
+        }
+        .icon-footer ul li {
+            margin: 0px 1.5rem 1rem 0rem;
+            font-size: 40px;
+            align-content: center;
+            justify-content: center;
+        }
+        .icon-footer ul li a {
+            color: white;
+        }
+        .icon-footer ul li a:hover,
+        a:active {
+            cursor: pointer;
+            color: black;
+            transition: .5s;
+        }
+        .footer-company {
+            display: flex;
+            background: white;
+            /* border: solid 1px red; */
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-company p {
+            font-family: 'Judson', serif;
+            font-weight: 700;
+            font-size: 26px;
+            color: #A8AD9F;
+        }
+        .bar {
+            border: 1px solid #5B3312;
+            margin-top: 20px;
+            margin: 20px 37% 0 37%;
+        }
+        .our-product {
+            width: 100%;
+        }
+        .our-product p {
+            font-family: 'Judson', serif;
+            font-weight: 700;
+            font-size: 69px;
+            text-align: center;
+            color: #5B3312;
+        }
+        .text1 {
+            display: block;
+        }
+
+        @media (max-width: 952px) {
+
+            /* ==========navbar========== */
+            .logo img {
+                margin-left: 0;
+                height: 2rem;
+                margin-top: 1.5rem;
+            }
+            .list li a {
+                font-size: 16px;
+            }
+            .price {
+                font-size: 50px;
+                font-family: Judson;
+                font-style: normal;
+                font-weight: bold;
+            }
+            .linetop {
+                padding-top: 0px;
+                size: 1px;
+                justify-content: center;
+            }
+            .line2 {
+                margin-top: 10%;
+                width: 100%;
+            }
+            .text2 {
+                margin-top: 0%;
+            }
+            .text3 {
+                margin-top: 100px;
+            }
+            .logo-footer {
+                margin-left: 4%;
+            }
+            .logo-footer img {
+                width: 120px;
+                margin: 3rem 0px 0px 0px;
+            }
+            .detail-footer {
+                box-sizing: border-box;
+                padding: 0px 0px 0px 4%;
+            }
+            .detail-footer p {
+                font-size: 16px;
+                padding-right: 0px;
+            }
+            .icon-footer ul li {
+                margin: 0px 1rem 1rem 0rem;
+                font-size: 32px;
+            }
+            .footer-company p {
+                font-size: 22px;
+            }
+            .bar {
+                margin-top: 20px;
+                margin: 20px 35% 0 35%;
+            }
+            .our-product p {
+                font-size: 65px;
+            }
+            .container {
+                margin-top: 50px;
+            }
+        }
+
+        /* ---------- iPhone6/7/8 - iPhoneX - iPhone6/7/8 Plus ---------- */
+        @media (max-width: 858px) {
+
+            /* ==========Grid========== */
+            body {
+                width: 100%;
+                grid-template-columns: 100%;
+                grid-template-rows: 70px 1fr 145px;
+                grid-template-areas:
+                    'nav'
+                    'our'
+                    'footer';
+            }
+            nav {
+                position: fixed;
+                grid-area: nav;
+            }
+            section {
+                padding-top: 20px;
+                grid-area: our;
+            }
+            footer {
+                grid-area: footer;
+            }
+            /* ==========Nav Bar========= */
+            nav {
+                z-index: 1;
+                background: #73806C;
+                height: 70px;
+                width: 100%;
+            }
+            .logo img {
+                margin-top: 1.2rem;
+                padding: 0px;
+                height: 1.7rem;
+            }
+            .logo a {
+                float: right;
+            }
+            .list {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #73806C;
+                top: 0px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            .list li p {
+                margin-top: 50px;
+            }
+            .list li {
+                display: block;
+                margin: 40px 10px 0px 10px;
+                line-height: 30px;
+            }
+            .list li a {
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+            .logo a:active {
+                background: none;
+            }
+            .list li a:hover,
+            a:active {
+                background: none;
+                color: black;
+            }
+            #check:checked~ul {
+                left: 0;
+            }
+            .icon-mb li a {
+                color: white;
+            }
+            .icon-mb li a:active {
+                color: black;
+            }
+            .iconhead {
+                display: flex;
+                margin: -45px 0px 0px 0px;
+                float: right;
+            }
+            .icon-mb {
+                display: flex;
+            }
+            .icon a i {
+                font-size: 20px;
+            }
+            .icon {
+                margin-right: 15px;
+            }
+            .show-dt {
+                display: none;
+            }
+            .list .show-mb {
+                display: inline-block;
+            }
+            label.logo {
+                color: white;
+                font-size: 35px;
+                line-height: 80px;
+                margin-left: 41%;
+                /* border: 1px solid black; */
+                display: inline-block;
+                margin-top: -100px;
+            }
+            label.logo a {
+                margin: -85px 0px 0px 0px;
+            }
+            li p {
+                font-size: 28px;
+            }
+            .checkbtn {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                z-index: 1;
+            }
+            .line {
+                width: 25px;
+                height: 3px;
+                background: #fff;
+                border-radius: 5px;
+                transition: all .5s ease-in-out;
+            }
+            .line::before,
+            .line::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 3px;
+                background: #fff;
+                border-radius: 5px;
+                transition: all .5s ease-in-out;
+            }
+            .line::before {
+                transform: translateY(-8px);
+            }
+            .line::after {
+                transform: translateY(8px);
+            }
+            .checkbtn.open .line {
+                transform: translateX(-50px);
+                background: transparent;
+                box-shadow: none;
+                z-index: 1;
+            }
+            .checkbtn.open .line::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+            .checkbtn.open .line::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+            .item {
+                width: 50%;
+                display: block;
+                box-sizing: border-box;
+                justify-content: center;
+            }
+            .flexbox {
+                justify-content: center;
+            }
+            .content {
+                justify-content: center;
+            }
+            .text1 {
+                font-size: 40px;
+                padding-top: 5%;
+            }
+            .text2 {
+                font-size: 18px;
+                text-align: center;
+                justify-content: center;
+                font-weight: normal;
+                margin-top: -20px;
+                margin-bottom: -50px;
+            }
+            .text3 {
+                font-size: 18px;
+                margin-top: -20px;
+                margin-bottom: -50px;
+            }
+            .price {
+                font-size: 25px;
+                padding-bottom: 0.25cm;
+            }
+            .weight {
+                font-size: 13px;
+            }
+            .container {
+                margin-top: 0px;
+            }
+            .line2 {
+                margin-top: 50px;
+            }
+            .text3 {
+                margin-top: 20px;
+            }
+            .footer {
+                height: 120px;
+                display: inline-block;
+            }
+            .logo-footer {
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .logo-footer img {
+                width: 60px;
+                margin: 0px;
+            }
+            .detail-footer {
+                margin: 55px 20px 0px 20px;
+                line-height: 12px;
+                display: block;
+                padding: 0px;
+            }
+            .detail-footer p {
+                font-size: 9px;
+            }
+
+            .icon-footer {
+                margin-top: -20px;
+                margin-right: 0.5rem;
+            }
+            .icon-footer ul li {
+                margin: 0px 0.5rem 0.5rem 0rem;
+                font-size: 20px;
+            }
+            .footer-company {
+                height: 25px;
+            }
+            .footer-company p {
+                font-size: 13px;
+            }
+            .bar {
+                margin: -10px 30% 10px 30%;
+            }
+            .our-product {
+                margin-top: -20px;
+                width: 100%;
+            }
+            .our-product p {
+                padding: 0;
+                font-size: 30px;
+            }
+
+            /* ----------  iPhone5/SE ---------- */
+            @media(max-width: 350px) {
+                /* ==========Grid========== */
+                body {
+                    width: 100%;
+                    grid-template-columns: 100%;
+                    grid-template-rows: 50px 1fr 120px;
+                    grid-template-areas:
+                        'nav'
+                        'our'
+                        'footer';
+                }
+                nav {
+                    height: 50px;
+                }
+                .logo img {
+                    height: 1.6rem;
+                }
+                .iconhead {
+                    margin: -35px 0px 0px 0px;
+                }
+                .icon a i {
+                    font-size: 16px;
+                }
+                .icon {
+                    margin-right: 13px;
+                }
+                label.logo {
+                    margin-left: 40%;
+                    margin-top: -100px;
+                }
+                label.logo a {
+                    margin: 35px 0px 0px 0px;
+                }
+                .list li a {
+                    font-size: 16px;
+                    padding: 0px 13px;
+                }
+                .checkbtn {
+                    width: 50px;
+                    height: 50px;
+                }
+                .line {
+                    width: 20px;
+                    height: 2px;
+                }
+                .line::before,
+                .line::after {
+                    width: 20px;
+                    height: 2px;
+                }
+                .line::before {
+                    transform: translateY(-6px);
+                }
+                .line::after {
+                    transform: translateY(6px);
+                }
+                .item {
+                    width: 50%;
+                    display: block;
+                    box-sizing: border-box;
+                    justify-content: center;
+                }
+                .flexbox {
+                    justify-content: center;
+                }
+                .content {
+                    justify-content: center;
+                }
+                .text1 {
+                    width: 100%;
+                    justify-content: center;
+                    text-align: center;
+                    font-family: Judson;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 40px;
+                    margin-top: 10px;
+                }
+                .text2 {
+                    font-size: 16px !important;
+                    text-align: center;
+                    justify-content: center;
+                    font-weight: normal;
+                    margin-top: -20px;
+                    margin-bottom: -50px;
+                }
+                .weight {
+                    font-family: Didact Gothic;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 11px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #5B3312;
+                    justify-content: center;
+                }
+                .price {
+                    font-family: Judson;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 23px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #5B3312;
+                    justify-content: center;
+                    padding-bottom: 0.25cm;
+                }
+                .container {
+                    margin-top: 10%;
+                    font-family: Judson;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 71px;
+                    line-height: 83px;
+                    /* display: block; */
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    box-sizing: content-box;
+                    color: #5B3312;
+                }
+                .text3 {
+                    font-size: 16px !important;
+                    text-align: center;
+                    justify-content: center;
+                    font-weight: normal;
+                    margin-top: -30px;
+                    margin-bottom: -50px;
+                }
+                .footer {
+                    /* margin-top: 3%; */
+                    height: 100px;
+                }
+                .logo-footer {
+                    margin: 15px 0px 0px 15px;
+                }
+                .logo-footer img {
+                    width: 40px;
+                }
+                .detail-footer {
+                    margin: 40px 15px 0px 15px;
+                    line-height: 10px;
+                }
+                .detail-footer p {
+                    font-size: 8px;
+                }
+                .icon-footer {
+                    margin-top: -10px;
+                }
+                .icon-footer ul li {
+                    font-size: 16px;
+                }
+                .footer-company {
+                    height: 20px;
+                }
+                .footer-company p {
+                    font-size: 12px;
+                }
+                .bar {
+                    margin: -10px 30% 10px 30%;
+                }
+                .our-product {
+                    margin-top: -50px;
+                    width: 100%;
+                }
+                .our-product p {
+                    font-size: 28px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <div class="line-1 line"></div>
+        </label>
+        <label class="logo"><a href="#"><img
+                    src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png"
+                    alt=""></a></label>
+        <div class="iconhead">
+            <ul class="icon-mb">
+                <li class="icon1 icon">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="icon2 icon">
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="list">
+            <li class="show-mb">
+                <p>Menu</p>
+                <div class="line1"></div>
+            </li>
+            <li><a class="show-mb" href="#">dried samhao for package cushioning</a></li>
+            <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
+            <li><a class="show-mb" href="#">About Us</a></li>
+            <li><a class="show-mb" href="#">Contact Us</a></li>
+            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="product">Shop</a></li>
+            <li><a class="show-dt" href="#">About</a></li>
+            <li><a class="show-dt" href="contact">Contact</a></li>
+            <li><a class="show-dt" href="shipping">
+                    <i class="fa fa-shopping-cart"></i> My Cart
+                </a></li>
+            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                </a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.querySelector('.checkbtn');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+    </script>
+
+    <section>
+        <div class="container">
+
+            <div class="our-product">
+                <p class="text1">Our Product</p>
+
+                <div class="bar"></div>
+            </div>
+
+            <p class="text2">Dried Samhao for package Cushioning </p>
+        </div>
+        <div class="flexbox">
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157163018682409/250g_cushion.jpg"
+                        class="image" width="100%"> <br>
+                    <p class="weight">250 gram</p>
+                    <p class="price">20 THB</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157168401154090/500g_cushion.jpg"
+                        class="image" width="100%">
+                    <p class="weight">500 gram</p>
+                    <p class="price">30 THB</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="content">
+                       <a href="detail"> <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157145734873129/1kg_cushion.jpg"
+                            class="image" width="100%"> </a>
+                        <p class="weight">1 kilogram</p>
+                        <p class="price">50 THB</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157154068299826/2kg_cushion.jpg"
+                        class="image" width="100%">
+                    <p class="weight">2 kilogram</p>
+                    <p class="price">90 THB</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157162076012584/5kg_cushion.jpg"
+                        class="image" width="100%">
+                    <p class="weight">5 kilogram</p>
+                    <p class="price">220 THB</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="text3">Dried Samhao for fuel </p>
+        </div>
+        <div class="flexbox">
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831513515357241394/500g_fuel.jpg"
+                        class="image" width="100%"> <br>
+                    <p class="weight">500 gram</p>
+                    <p class="price">30 THB</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831513502110842940/1kg_fuel.jpg"
+                        class="image" width="100%">
+                    <p class="weight">1 kilogram</p>
+                    <p class="price">50 THB</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831513507949838356/2kg_fuel.jpg"
+                        class="image" width="100%">
+                    <p class="weight">2 kilogram</p>
+                    <p class="price">90 THB</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831513510823198720/5kg_fuel.jpg"
+                        class="image" width="100%">
+                    <p class="weight">5 kilogram</p>
+                    <p class="price">220 THB</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831513512051998740/10kg_fuel.jpg"
+                        class="image" width="100%">
+                    <p class="weight">10 kilogram</p>
+                    <p class="price">430 THB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png"
+                    alt="">
+            </div>
+            <div class="detail-footer">
+                <p>51 soi ramkhamhaeng, wang thong lang district, phlabpla bangkok 10310
+                    <br>email : samhaofiber@gmail.com
+                    <br>tel : 02-232-0000
+                </p>
+            </div>
+            <div class="icon-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-facebook-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-instagram-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://line.me/th/" target="_blank"><i class="fab fa-line"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-line"></i></a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-company">
+            <p>Samhao Company</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

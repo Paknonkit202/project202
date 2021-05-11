@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="page_thank_you.css"> -->
+
+    <title>Thank You</title>
+
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 1fr 190px;
+    grid-template-areas: 
+    'nav'
+    'thankyou'
+    'footer';
+}
+nav{
+    grid-area: nav;
+}
+section{
+    grid-area: thankyou;
+}
+footer{
+    grid-area: footer;
+}
+
+/* ---------- Desktop ---------- */
+/* =============navbar============= */
+.logo img{
+    height: 2.5rem;
+    margin-top: 1.2rem;
+}
+nav{
+  background: #73806C;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  margin-left: 50px;
+}
+.list{
+  float: right;
+  margin-right: 20px;
+}
+.list li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+.list li a{
+  color: white;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: Didact Gothic;
+  font-weight: 400;
+}
+.show-dt:hover{
+  background: white;
+  transition: .5s;
+  border-radius: 20px;
+  color: black;    
+}
+#check{
+ display: none;
+}
+.logo a:hover{
+  background: none;
+}
+.list .show-mb {
+  display: none;
+}
+li p{
+  font-family: 'Judson', serif;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+.line1{
+  margin-top: 2rem;
+  width: 144px;
+  border: 1px white solid;
+}
+.iconhead{
+  display: none;
+}
+
+/* ==========Thank You========== */
+section{
+    padding: 60px 0px;
+    background: #EFE2D4;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.title p{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    color: #5B3312;
+    font-size: 98px;
+    padding: 20px 0;
+}
+.line-thk{
+    display: flex;
+    justify-content: center;
+    
+}
+.below{
+    border: 1px solid #5B3312;
+    width: 300px;
+}
+.pic{
+    width: 100%;
+    /* height: auto; */
+    margin-top: -2%;
+    margin-bottom: 1%;
+}
+button{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 28px;
+}
+#home{
+    cursor: pointer;
+    border: none;
+    background: #B79E84;
+    color: #5B3312;
+    width: 200px;
+    height: 55px;
+}
+#shop{
+    cursor: pointer;
+    border: none;
+    background: #5B3312;
+    color: #FFFFFF;
+    width: 200px;
+    height: 55px;
+    margin-left: 2%;
+}
+
+/* ==========footer========== */
+footer{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.footer{
+    background: #73806C;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-footer{
+    float: left;
+    margin-left: 5%;
+}
+.logo-footer img{
+    width: 160px;
+    margin: 2.6rem 0px 0px 0px;
+}
+.detail-footer{
+    display: inline-flex;
+    line-height: 32px;
+    align-items: center;
+    padding-left: 50px;
+}
+.detail-footer p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+}
+.icon-footer{
+    float: right;
+    display: flex; 
+}
+.icon-footer ul{
+    display: flex;
+    align-items: flex-end;
+}
+.icon-footer ul li{
+    margin: 0px 1.5rem 1rem 0rem;
+    font-size: 40px;
+    align-content: center;
+    justify-content: center;
+}
+.icon-footer ul li a{
+    color: white;
+}
+.icon-footer ul li a:hover, a:active{
+    cursor: pointer;
+    color: black;
+    transition: .5s;
+}
+.footer-company{
+    display: flex;
+    background: white;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-company p{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #A8AD9F;
+}
+
+@media (max-width: 952px){
+/* ==========navbar========== */
+.logo img{
+    margin-left: 0;
+    height: 2rem;
+    margin-top: 1.5rem;
+}
+.list li a{
+    font-size: 16px;
+}
+
+/* ==========Thank You========== */  
+section{
+    padding: 50px 0px;
+}
+.title p{
+    font-size: 90px;
+    padding: 15px 0;
+}
+.below{
+    width: 275px;
+}
+button{
+    font-size: 26px;
+}
+#home{
+    width: 190px;
+    height: 50px;
+}
+#shop{
+    width: 190px;
+    height: 50px;
+}
+/* ==========footer========== */
+.logo-footer{
+    margin-left: 4%;
+}
+.logo-footer img{
+    width: 120px;
+    margin: 3rem 0px 0px 0px;
+}
+.detail-footer{
+    box-sizing: border-box;
+    padding: 0px 0px 0px 4%;
+}
+.detail-footer p{
+    font-size: 16px;
+    padding-right: 0px;
+}
+.icon-footer ul li{
+    margin: 0px 1rem 1rem 0rem;
+    font-size: 32px;
+}
+.footer-company p{
+    font-size: 22px;
+}
+/* ---------- iPhone6/7/8 - iPhoneX - iPhone6/7/8 Plus ---------- */
+@media (max-width: 858px){
+    /* ==========Grid========== */
+    body{
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 70px 1fr 145px;
+        grid-template-areas: 
+        'nav'
+        'thk'
+        'footer';
+    }
+    nav{
+        position: fixed;
+        grid-area: nav;
+    }
+    section{
+        /* padding-top: 20px; */
+        grid-area: thk;
+    }
+    footer{
+        grid-area: footer;
+    }
+
+    /* ==========navbar========== */
+    nav{
+        background: #73806C;
+        height: 70px;
+        width: 100%;
+    }
+    .logo img{
+        margin-top: 1.2rem;
+        padding: 0px;
+        height: 1.7rem;
+    }
+    .logo a{
+        float: right;
+    }
+    .list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #73806C;
+        top: 0px; 
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    .list li p{
+        margin-top: 50px;
+    }
+    .list li{
+        display: block;
+        margin: 40px 10px 0px 10px;
+        line-height: 30px;
+    }
+    .list li a{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .logo a:active{
+        background: none;
+    }
+    .list li a:hover,a:active{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .icon-mb li a{
+        color: white;
+    }
+    .icon-mb li a:active{
+        color: black;
+    }
+    .iconhead{
+        display: flex;
+        margin: -45px 0px 0px 0px;
+        float: right;
+    }
+    .icon-mb{
+        display: flex;
+    }
+    .icon a i{
+        font-size: 20px;
+    }
+    .icon{
+        margin-right: 15px;
+    }
+    .show-dt{
+        display: none;
+    }
+    .list .show-mb{
+        display: inline-block;
+    }
+    label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        margin-left: 41%;
+        /* border: 1px solid black; */
+        display: inline-block;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: -85px 0px 0px 0px;
+    }
+    li p{
+        font-size: 28px;
+    }
+    .checkbtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+    }
+    .line {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before {
+        transform: translateY(-8px);
+    }
+    .line::after {
+        transform: translateY(8px);
+    }
+    .checkbtn.open .line {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+        z-index: 1;
+    }
+    .checkbtn.open .line::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .checkbtn.open .line::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    /* ==========footer========== */
+    footer{
+        width: 100%;
+    }
+    .footer{
+        height: 120px;
+        display: inline-block;
+    }
+    .logo-footer{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .logo-footer img{
+        width: 60px;
+        margin: 0px;
+    }
+    .detail-footer{
+        margin: 55px 20px 0px 20px ;
+        line-height: 12px;
+        display: block;
+        padding: 0px;
+    }
+    .detail-footer p{
+        font-size: 9px;
+    }
+    .icon-footer{
+        margin-top: -20px;
+        margin-right: 0.5rem;
+    }
+    .icon-footer ul li{
+        margin: 0px 0.5rem 0.5rem 0rem;
+        font-size: 20px;
+    }
+    .footer-company{
+        height: 25px;
+    }
+    .footer-company p{
+        font-size: 13px;
+    }
+/* ==========Thank You========== */  
+    section{
+        padding: 100px 0px;
+    }
+    .title p{
+        font-size: 40px;
+        padding: 15px 0;
+    }
+    .below{
+        width: 130px;
+    }
+    button{
+        font-size: 21px;
+    }
+    #home{
+        background: #5B3312;
+        color: #FFFFFF;
+        width: 130px;
+        height: 37px;
+    }
+    #shop{
+        background: #B79E84;
+        color: #5B3312;
+        width: 130px;
+        height: 37px;
+    }
+}
+ /* ----------  iPhone5/SE ---------- */
+@media (max-width: 350px){
+    /* ==========Grid========== */
+        body{
+            width: 100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 50px 1fr 120px;
+            grid-template-areas: 
+            'nav'
+            'thk'
+            'footer';
+        }
+    /* ==========navbar========== */
+        nav{
+            height: 50px;
+        }
+        .logo img{
+            height: 1.6rem;
+        }
+        .iconhead{
+            margin: -35px 0px 0px 0px;
+        }
+        .icon a i{
+            font-size: 16px;
+        }
+        .icon{
+            margin-right: 13px;
+        }
+        label.logo{
+            margin-left: 40%;
+            margin-top: -100px;
+        }
+        label.logo a{
+            margin: 35px 0px 0px 0px;
+        }
+        .list li a{
+            font-size: 16px;
+            padding: 0px 13px;
+        }
+        .checkbtn {
+            width: 50px;
+            height: 50px;
+        }
+        .line {
+            width: 20px;
+            height: 2px;
+        }
+        .line::before,
+        .line::after {
+            width: 20px;
+            height: 2px;
+        }
+        .line::before {
+            transform: translateY(-6px);
+        }
+        .line::after {
+            transform: translateY(6px);
+        }
+    /* ==========Thank You========== */
+        section{
+            padding: 90px 0px;
+        }
+        .title p{
+            font-size: 38px;
+            padding: 15px 0;
+        }
+        .below{
+            width: 120px;
+        }
+        button{
+            font-size: 19px;
+        }
+        #home{
+            width: 120px;
+            height: 35px;
+        }
+        #shop{
+            width: 120px;
+            height: 35px;
+        }
+
+    /* ==========footer========== */
+        .footer{
+            height: 100px;
+        }
+        .logo-footer{
+            margin: 15px 0px 0px 15px;
+        }
+        .logo-footer img{
+            width: 40px;
+        }
+        .detail-footer{
+            margin: 40px 15px 0px 15px ;
+            line-height: 10px;
+        }
+        .detail-footer p{
+            font-size: 8px;
+        }
+        .icon-footer{
+            margin-top: -10px;
+        }
+        .icon-footer ul li{
+            font-size: 16px;
+        }
+        .footer-company{
+            height: 20px;
+        }
+        .footer-company p{
+            font-size: 12px;
+        }
+}
+}
+</style>
+
+</head>
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <div class="line-1 line"></div>
+        </label>
+        <label class="logo"><a href="#"><img
+                    src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png"
+                    alt=""></a></label>
+        <div class="iconhead">
+            <ul class="icon-mb">
+                <li class="icon1 icon">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="icon2 icon">
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="list">
+            <li class="show-mb">
+                <p>Menu</p>
+                <div class="line1"></div>
+            </li>
+            <li><a class="show-mb" href="#">dried samhao for package cushioning</a></li>
+            <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
+            <li><a class="show-mb" href="#">About Us</a></li>
+            <li><a class="show-mb" href="#">Contact Us</a></li>
+            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="product">Shop</a></li>
+            <li><a class="show-dt" href="#">About</a></li>
+            <li><a class="show-dt" href="contact">Contact</a></li>
+            <li><a class="show-dt" href="shipping">
+                    <i class="fa fa-shopping-cart"></i> My Cart
+                </a></li>
+            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                </a></li>
+        </ul>
+
+    </nav>
+
+    <script>
+        const menuBtn = document.querySelector('.checkbtn');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+    </script>
+    
+    <section>
+        <div class="title">
+            <p>Thank You</p>
+            <div class="line-thk">
+                <div class="below"></div>
+            </div>
+        </div>
+        <div class="pic">
+            <img src="https://cdn.discordapp.com/attachments/821748947684294709/835886805835579412/7.png" alt="">
+        </div>
+        <div class="button">
+            <a href="#"><button id="home">Home</button></a>
+            <a href="#"><button id="shop">Shop More</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png" alt="">
+            </div>
+            <div class="detail-footer">
+                <p>51 soi ramkhamhaeng, wang thong lang district, phlabpla bangkok 10310
+                    <br>email : samhaofiber@gmail.com
+                    <br>tel : 02-232-0000
+                </p>
+            </div>
+            <div class="icon-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-facebook-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-instagram-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://line.me/th/" target="_blank"><i class="fab fa-line"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-line"></i></a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-company">
+            <p>Samhao Company</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

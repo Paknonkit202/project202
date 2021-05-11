@@ -1,0 +1,1449 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap"
+        rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script type="text/javascript"> 
+            $(function(){
+                $('input[type="number"]').niceNumber();
+            });
+        </script>
+        <script>
+
+        </script>
+        
+    <title>detail</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; 
+}
+/* start nav bar */
+/* ---------- Desktop ---------- */
+.logo img{
+    height: 2.5rem;
+    margin-top: 1.2rem;
+}
+nav{
+  background: #73806C;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  margin-left: 50px;
+}
+.list{
+  float: right;
+  margin-right: 20px;
+}
+.list li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+.list li a{
+  color: white;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: Didact Gothic;
+  font-weight: 400;
+}
+.show-dt:hover{
+  background: white;
+  transition: .5s;
+  border-radius: 20px;
+  color: black;    
+}
+#check{
+ display: none;
+}
+.logo a:hover{
+  background: none;
+}
+.list .show-mb {
+  display: none;
+}
+li p{
+  font-family: 'Judson', serif;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+.line1{
+  margin-top: 2rem;
+  width: 144px;
+  border: 1px white solid;
+}
+.iconhead{
+  display: none;
+}
+
+/* end nav bar */
+/*======================== desktop ======================== */
+ /* กล่องใหญ่คลุมทั้งหน้า */
+.container{
+    background: #EFE2D4;
+}
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'Gun Nam'
+        'Ai Ai';
+}
+
+/* grid รูป 4 รูป  */
+.gridpic{
+    display: grid;
+    grid-template-columns:(1fr );
+    grid-template-rows: repeat(40vw, 40vw);
+}
+
+section{
+    background: #EFE2D4;
+    padding-left: 2.5cm;
+    padding-right: 2.5cm;
+    width: 100%;
+    margin: 0 auto;
+}
+/* grid รูป 1 รูป */
+.gridpic img{
+    max-height: 100%;
+    height: 330px;
+    max-width: 100%;
+    width: 565px;
+}
+/* grid รูป 3 รูป */
+.threepic img{
+    max-height: 100%;
+    height: 180px;
+    max-width: 100%;
+    width: 185px;
+}
+.grid-right{
+    padding-left: 20px;
+}
+/* ลูกศรบนซ้าย */
+.lefticon a{
+    color: #5B3312;
+    font-size: 50px;
+    /* padding-top: 20px; */
+    padding-top: 10px;
+}
+
+.content-top { 
+    /* ฝั่งขวาทั้งหมด */
+    color: #5B3312;
+}
+.price{
+    border-top: 1px solid #5B3312;
+    border-bottom: 1px solid #5B3312;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'price quantity';
+}
+.name{
+    grid-area: price;
+}
+.quantity{
+    grid-area: quantity;
+}
+.top p{
+    font-size: 48px;
+    font-family: 'Judson', serif;
+}
+.content-top i {
+    font-size: 22px;
+    padding: 20px 0;
+}
+
+.content-top h1{
+    padding: 20px;
+    /* border-top: 2px solid #5B3312; */
+    font-size: 60px;
+    /* border-bottom: 2px solid #5B3312; */
+    font-family: 'Judson', serif;
+}
+
+.quantity{
+    display: block;
+    position: relative;
+    padding-top: 25px;
+}
+.quantity p{
+    font-size: 22px;
+    color: #5B3312;
+}
+.quantity form input{
+    border: 1px solid #5B3312;
+    outline: none;
+    padding: 10px;
+    background: #EFE2D4;
+    color: #5B3312;
+    width: 80%;
+    text-align: center;
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Judson', serif;
+    
+}
+.quantity form input::-webkit-inner-spin-button,
+.quantity form input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.nice-number{
+    display: inline-flex;
+    justify-content: stretch;
+    margin-top: 3%;
+}
+.nice-number button{
+    color: #5B3312;
+    background: #B79E84;
+    width: 40px;
+    border: 1px solid #5B3312;
+    font-size: 20px;
+    outline: none;
+    text-align: center;
+}
+.nice-number button:hover{
+    cursor: pointer;
+}
+.top-on-middle h1{
+    font-size: 48px;
+    font-family: 'Judson', serif;
+}
+.content-name p{
+    font-size: 40px;
+    font-family: 'Judson', serif;
+    text-align: center;
+    color: #5B3312;
+    justify-items: center;
+    margin-top: 40px;
+    border-top: 2px solid  #5B3312;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid  #5B3312;
+}
+.content-bottom hr{
+    width: 50%;
+    align-items: center;
+    height: 1px;
+}
+.nextbot{
+    margin-top: 30%;
+
+}
+.nextround{
+    padding: 8px 16px;
+    font-size: 60px;
+    color: #5B3312;
+    position: relative;
+    display: inline-block;
+  }
+
+.nextround1{
+    padding: 8px 16px;
+    font-size: 60px;
+    color: #5B3312;  
+    position: relative; 
+    float: right;
+    display: inline-block;
+}
+.left a{
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.picinmid img{
+    padding: 100;
+    max-height: 100%;
+    height: 200px;
+    max-width: 100%;
+    width: 280;
+}
+.picinmid2 img{
+    padding: 100;
+    max-height: 100%;
+    height: 200px;
+    max-width: 100%;
+    width: 280;
+}
+.picinmid3 img{
+    padding: 100;
+    max-height: 100%;
+    height: 200px;
+    max-width: 100%;
+    width: 280;
+}
+.botton a2{
+    float:right;
+
+}
+.content-gridbot{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+}
+/* .content-gridbot{
+    color: #5B3312;
+} */
+.picinmid {
+    font-size: 22px;
+    font-family: 'Judson', serif;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+.picinmid2 {
+    font-size: 22px;
+    font-family: 'Judson', serif;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+.picinmid3 {
+    font-size: 22px;
+    font-family: 'Judson', serif;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.detail-grid p{ 
+    font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.button button{
+    background-color: #5B3312; /* Green */
+    border: none;
+    color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.content-bottom{
+    grid-area: Ai;
+    width: 100%;
+    justify-self: center;  
+    display: flex;
+    flex-direction: column; 
+}
+/* ================Wrapper====================== */
+.post-slider{
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
+
+.post-slider .post-wrapper{
+    width: 96%;
+    height: 280px;
+    margin: 0px auto;
+    overflow: hidden;
+    /* border: 1px dashed red; */
+}
+.post-slider .post-wrapper .post{
+    display: inline-block;
+    background: #EFE2D4;
+    margin: 20px 50px ;
+    width: 300px;
+    height: 350px;
+  
+}
+.post-slider .next{
+    position: absolute;
+    top: 125%;
+    right: 50px;
+    font-size: 2em;
+    color: #5B3312;
+}
+.post-slider .prev{
+    position: absolute;
+    top: 125%;
+    left: 50px;
+    font-size: 2em;
+    color: #5B3312;
+}
+/* .silder-image{
+    height: 200px;
+    width: 200px;
+} */
+.post-slider .post-wrapper .post .silder-image{
+    width: 100%;
+    height: 200px;
+    
+
+}
+.post p{
+    font-size: 12px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: #5B3312;
+}
+
+
+.post h2{
+    font-size: 22px;
+    font-family: 'Judson', serif;
+    color: #5B3312;
+}
+/* 
+.post-slider .post-wrapper{
+    display: inline-block;
+    background: #050505;
+} */
+
+
+
+/* ================end Wrapper====================== */
+/* mid-bot */
+/* ================footer======================= */
+.footer{
+
+    background: #73806C;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-footer{
+    float: left;
+    margin-left: 5%;
+    /* border: 1px solid sandybrown; */
+}
+.logo-footer img{
+    width: 160px;
+    margin: 2.6rem 0px 0px 0px;
+}
+.detail-footer{
+    display: inline-flex;
+    line-height: 32px;
+    /* border: solid 1px black; */
+    align-items: center;
+    padding-left: 50px;
+}
+.detail-footer p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+}
+.icon-footer{
+    float: right;
+    /* border: 1px solid blue; */
+    display: flex; 
+}
+.icon-footer ul{
+    display: flex;
+    align-items: flex-end;
+}
+.icon-footer ul li{
+    margin: 0px 1.5rem 1rem 0rem;
+    font-size: 40px;
+    align-content: center;
+    justify-content: center;
+}
+.icon-footer ul li a{
+    color: white;
+}
+.icon-footer ul li a:hover, a:active{
+    cursor: pointer;
+    color: black;
+    transition: .5s;
+}
+.footer-company{
+    display: flex;
+    background: white;
+    /* border: solid 1px red; */
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-company p{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #A8AD9F;
+}
+
+/* ================footer======================= */
+/* ipad pro */
+
+/* ipad pro */
+@media (max-width: 1024px){
+    .gridpic img{
+        max-height: 100%;
+        height: 330px;
+        max-width: 100%;
+        width: 565px;
+    }
+    /* grid รูป 3 รูป */
+    .threepic img{
+        max-height: 100%;
+        height: 120px;
+        max-width: 100%;
+        width: 135px;
+    }
+}
+/*======================== desktop ======================== */
+/* ipad */
+@media (max-width: 768px){
+      nav{
+            background: #73806C;
+            height: 70px;
+            width: 100%;
+        }
+        .logo img{
+            margin-top: 1.2rem;
+            padding: 0px;
+            height: 1.7rem;
+        }
+        .logo a{
+            float: right;
+        }
+        .list{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #73806C;
+            top: 0px; 
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            z-index: 1;
+        }
+        .list li p{
+            margin-top: 50px;
+        }
+        .list li{
+            display: block;
+            margin: 40px 10px 0px 10px;
+            line-height: 30px;
+        }
+        .list li a{
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .logo a:active{
+            background: none;
+        }
+        .list li a:hover,a:active{
+            background: none;
+            color: black;
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+        .icon-mb li a{
+            color: white;
+        }
+        .icon-mb li a:active{
+            color: black;
+        }
+        .iconhead{
+            display: flex;
+            margin: -45px 0px 0px 0px;
+            float: right;
+        }
+        .icon-mb{
+            display: flex;
+        }
+        .icon a i{
+            font-size: 20px;
+        }
+        .icon{
+            margin-right: 15px;
+        }
+        .show-dt{
+            display: none;
+        }
+        .list .show-mb{
+            display: inline-block;
+        }
+        label.logo{
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            margin-left: 41%;
+            /* border: 1px solid black; */
+            display: inline-block;
+            margin-top: -100px;
+        }
+        label.logo a{
+            margin: -85px 0px 0px 0px;
+        }
+        li p{
+            font-size: 28px;
+        }
+        .checkbtn {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            z-index: 2;
+        }
+        .line {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+        .line::before,
+        .line::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+        .line::before {
+            transform: translateY(-8px);
+        }
+        .line::after {
+            transform: translateY(8px);
+        }
+        .checkbtn.open .line {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+            z-index: 1;
+        }
+        .checkbtn.open .line::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+        .checkbtn.open .line::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+        /* end neavbar */
+    
+        /* start at content grid  */ 
+        section{
+            padding-left: 1.5cm;
+            padding-right: 1.5cm;
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        .lefticon a{
+            color: #5B3312;
+            font-size: 30px;
+            padding: 0%;
+        }
+        .onepic img{
+          max-width: 100%;
+          height: 100%;
+          width: 100%;
+          max-height: 100%;
+          
+        }
+    
+        .threepic img{
+            max-width: 100%;
+            max-height: 100%;
+            height: 100%;
+            width: 32.3%;
+        
+        }
+        .lefticon {
+            font-size: 30px;
+}
+    }
+/* ipad */
+/* =========== iphone 6/7/8plus  ============= */
+    @media (max-width: 414px){
+        nav{
+            background: #73806C;
+            height: 70px;
+            width: 100%;
+        }
+        .logo img{
+            margin-top: 1.2rem;
+            padding: 0px;
+            height: 1.7rem;
+        }
+        .logo a{
+            float: right;
+        }
+        .list{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #73806C;
+            top: 0px; 
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            z-index: 1;
+        }
+        .list li p{
+            margin-top: 50px;
+        }
+        .list li{
+            display: block;
+            margin: 40px 10px 0px 10px;
+            line-height: 30px;
+        }
+        .list li a{
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .logo a:active{
+            background: none;
+        }
+        .list li a:hover,a:active{
+            background: none;
+            color: black;
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+        .icon-mb li a{
+            color: white;
+        }
+        .icon-mb li a:active{
+            color: black;
+        }
+        .iconhead{
+            display: flex;
+            margin: -45px 0px 0px 0px;
+            float: right;
+        }
+        .icon-mb{
+            display: flex;
+        }
+        .icon a i{
+            font-size: 20px;
+        }
+        .icon{
+            margin-right: 15px;
+        }
+        .show-dt{
+            display: none;
+        }
+        .list .show-mb{
+            display: inline-block;
+        }
+        label.logo{
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            margin-left: 41%;
+            /* border: 1px solid black; */
+            display: inline-block;
+            margin-top: -100px;
+        }
+        label.logo a{
+            margin: -85px 0px 0px 0px;
+        }
+        li p{
+            font-size: 28px;
+        }
+        .onepic{
+            height: 350px;
+        }
+        .gridpic{
+            height: 350px;
+        }
+        .checkbtn {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            z-index: 2;
+        }
+        .line {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+        .line::before,
+        .line::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+        .line::before {
+            transform: translateY(-8px);
+        }
+        .line::after {
+            transform: translateY(8px);
+        }
+        .checkbtn.open .line {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+            z-index: 1;
+        }
+        .checkbtn.open .line::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+        .checkbtn.open .line::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+        /* end neavbar */
+    
+        /* start at content grid  */ 
+        section{
+            padding-left: 1.5cm;
+            padding-right: 1.5cm;
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        .lefticon a{
+            color: #5B3312;
+            font-size: 30px;
+            padding: 0%;
+        }
+        .onepic img{
+          max-width: 100%;
+          height: 230px;
+          width: 500px;
+          max-height: 100%;
+          margin-top: 20px;
+        }
+    
+        .threepic img{
+          
+            height: 100px;
+            width: 32.3%;
+        
+        }
+        .content-grid{
+        display: grid;
+        grid-template-columns: 1fr  ;
+        grid-template-rows: repeat(2,1fr) ;
+        grid-template-areas: 
+        'Gun '
+        'Nam'
+        ;
+        }
+        .content-top{
+            color: #5B3312;
+        }
+        .content-top{
+            color: #5B3312;
+        }
+        .top p{
+            font-size: 22px;
+            font-family: 'Judson', serif;
+        }
+        .content-top i {
+            font-size: 12px;
+            padding: 10px 0;
+        }
+        .content-top h1{
+            /* padding: 10px; */
+            /* border-top: 1px solid #5B3312; */
+            font-size: 30px;
+            /* border-bottom: 1px solid #5B3312; */
+            font-family: 'Judson', serif;
+        }
+            
+        .quantity{
+            display: block;
+            position: relative;
+            padding-top: 12px;
+        }
+        .detail-grid p{ 
+            font-size: 12px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            padding: 20px 0;
+        }
+        .button button{
+            background-color: #5B3312; /* Green */
+            border: none;
+            color: white;
+            font-family: 'Didact Gothic', sans-serif;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 15px 0px;
+            cursor: pointer;
+        }
+        .button{
+            margin-bottom: 25px;
+        }
+        .content-bottom{
+            display: none;
+        }
+        .footer{
+            height: 120px;
+            display: inline-block;
+        }
+        .logo-footer{
+            /* border: solid 1px black; */
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .logo-footer img{
+            width: 60px;
+            margin: 0px;
+        }
+        .detail-footer{
+            margin: 55px 20px 0px 20px ;
+            line-height: 12px;
+            display: block;
+            /* border: 1px solid orange; */
+            padding: 0px;
+        }
+        .detail-footer p{
+            font-size: 9px;
+        }
+        .icon-footer{
+            /* border: green 1px solid; */
+            margin-top: -20px;
+            margin-right: 0.5rem;
+        }
+        .icon-footer ul li{
+            margin: 0px 0.5rem 0.5rem 0rem;
+            font-size: 20px;
+        }
+        .footer-company{
+            height: 25px;
+            /* border: solid 1px red; */
+        }
+        .footer-company p{
+            font-size: 13px;
+        }
+        .grid-right{
+            padding-left: 0px;
+        }
+    }
+    @media (max-width: 375px){
+        .onepic{
+            margin-top: 20px;
+            height: 340px;
+        }
+        .gridpic img{
+            /* max-height: 100%; */
+            height: 220px;
+            width: 500px;
+        }
+        /* grid รูป 3 รูป */
+        .threepic img{
+            /* max-height: 100%; */
+            height: 90px;
+            max-width: 100%;
+            width: 83px;
+        }
+        .quantity{
+            display: block;
+            position: relative;
+            padding-top: 12px;
+        }
+        .content-top h1{
+        font-size: 25px; 
+        font-family: 'Judson', serif;
+        }
+        .lefticon {
+        padding-top: 10px;
+         font-size: 30px;
+
+        }
+    }
+
+    @media (max-width: 320px){
+        .gridpic img{
+            height: 180px;
+            width: 300px;
+        }
+        /* grid รูป 3 รูป */
+        .threepic img{
+            height: 90px;
+            width: 68px;
+        }
+        .content-grid{
+            height: 800px;
+        }
+        .quantity{
+            /* margin-top: 10px; */
+        }
+        .lefticon {
+        
+         font-size: 20px;
+
+        }
+    }
+    
+    
+
+</style>
+<body>
+    <!-- =================== nav ======================= -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <div class="line-1 line"></div>
+        </label>
+        <label class="logo"><a href="#"><img src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png" alt=""></a></label>
+        <div class="iconhead">
+            <ul class="icon-mb">
+                <li class="icon1 icon"> 
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>   
+                </li>
+                <li class="icon2 icon">
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul class="list">
+            <li class="show-mb">
+                <p>Menu</p>
+                <div class="line1"></div>
+            </li>
+            <li><a class="show-mb" href="#">dried samhao for package cushioning</a></li>
+            <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
+            <li><a class="show-mb" href="#">About Us</a></li>
+            <li><a class="show-mb" href="#">Contact Us</a></li>
+            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="product">Shop</a></li>
+            <li><a class="show-dt" href="#">About</a></li>
+            <li><a class="show-dt" href="contact">Contact</a></li>
+            <li><a class="show-dt" href="shipping">
+                    <i class="fa fa-shopping-cart"></i> My Cart
+                </a></li>
+            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                </a></li>
+        </ul>
+    </nav>
+    <script src="navbar.js"></script>
+    <script>
+        const menuBtn = document.querySelector('.checkbtn');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+    </script>
+<!-- =================== end nav======================= -->
+
+<!-- =================== body content ================= -->
+<div class="container">
+    <section class="content">
+        <div class="lefticon">
+            <a href="#" class="left">&#10229;</a>
+        </div>
+    <div class="content-grid">
+        <div class="gridpic">
+            <div class="onepic">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157145734873129/1kg_cushion.jpg"> 
+            
+            <div class="threepic">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831156748240945162/1327022136.jpg" class="peak1">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831156532150009876/S__9339106.jpg">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831156608226689064/1327252697.jpg">
+            </div>  
+        </div>
+        </div>
+        <div class="grid-right">
+            <div class="content-top">
+                <div class="top">
+                    <p>Dried Samhao <br>
+                        for package Cushioning <br>
+                        (1 kilogram)</p>
+                </div>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star">
+                        <i2>547views</i2>
+                    </i>
+                </div>
+                <div class="price">
+                    <div class="name">
+                        <h1>50 THB </h1> 
+                    </div>
+             
+                    
+                </div>
+                <div class="detail-grid">
+                    <p>A strong product made from 100% natural ingredients use as <br> cushioning. <br> Our "water
+                    hyacinth" products did not creating litter,<br> biodegradable and harmless.</p>
+                </div>
+
+                <div class="button">
+                    <a type="button" href="shopping" style="color:;">Add To Cart</a>
+                </div>
+                </div>
+            </div>
+            <div class="content-bottom">
+
+                <div class="content-name">
+                    <p>Similar Product</p>
+                    </div>
+
+                    <!-- <div class="content-gridbot">
+                        <div class="picinmid">
+                            
+                            <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157163018682409/250g_cushion.jpg" alt="">
+                            <p>Dried Samhao <br> forpackage Cushioning </p>
+                            <h2>20 THB</h2>
+                        </div>   
+
+                        <div class="picinmid2">
+                            <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157168401154090/500g_cushion.jpg" alt="">
+                            <p>Dried Samhao <br> forpackage Cushioning </p>
+                            <h2>30 THB</h2>
+                        </div>
+
+                        <div class="picinmid3">
+                            <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157154068299826/2kg_cushion.jpg" alt="">
+                            <p>Dried Samhao <br> forpackage Cushioning </p>
+                            <h2>90 THB</h2>
+                        </div>
+                       
+                         </div>
+
+                    </div> -->
+
+                    <div class="page-wrapper">
+                        
+                        
+                        <div class="post-slider">
+                            
+                            <i class="fas fa-chevron-left prev"></i>
+                            <i class="fas fa-chevron-right next"></i>
+
+                            <div class="post-wrapper">
+                                <div class="post">
+                                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157163018682409/250g_cushion.jpg" alt="" class="silder-image">
+                                    <div class="post-info">
+                                        <p>Dried Samhao <br> forpackage Cushioning ( 250 gram )</p>
+                                        <h2>20 THB</h2>
+                                    </div>
+                                </div>
+
+                                <div class="post">
+                                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157168401154090/500g_cushion.jpg" alt="" class="silder-image">
+                                    <p>Dried Samhao <br> forpackage Cushioning ( 500 gram )</p>
+                                    <h2>30 THB</h2>
+                                </div>
+                                <div class="post">
+                                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157154068299826/2kg_cushion.jpg" alt=""class="silder-image">
+                                    <p>Dried Samhao <br> forpackage Cushioning ( 2 gram )</p>
+                                    <h2>90 THB</h2>
+                                </div>
+                                <div class="post"> 
+                                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/840252251212742656/5kg_cushion.jpg" alt="" class="silder-image">
+                                    <p>Dried Samhao <br> forpackage Cushioning ( 5 kilogram )</p>
+
+                                    <h2>220 THB</h2>
+                                </div>
+                                <!-- <div class="post">
+                                    <img src="" alt="" class="silder-image"></div>
+                            </div> -->
+                        </div>
+
+                    </div>
+                    <!-- jquery -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <!--  slick -->
+                    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+                    <!-- custom -->
+                    <script src="scripts.js"></script>
+            </div>
+            
+
+    </div>
+    </section>
+
+</div>
+
+<!-- =================== body content ================= -->
+<script>
+    (function ($) {
+$.fn.niceNumber = function (options) {
+    var defaults = {
+        autoSize: true,
+        autoSizeBuffer: 1,
+        buttonDecrement: '-',
+        buttonIncrement: '+',
+        buttonPosition: 'around',
+
+        /**
+            callbackFunction
+            @param {$input} currentInput - the input running the callback
+            @param {number} amount - the amount after increase/decrease
+            @param {object} settings - the passed niceNumber settings
+        **/
+        onDecrement: false,
+        onIncrement: false,
+    };
+    var settings = $.extend(defaults, options);
+
+    return this.each(function () {
+        var currentInput = this,
+            $currentInput = $(currentInput),
+            maxValue = $currentInput.attr('max'),
+            minValue = $currentInput.attr('min'),
+            attrMax = null,
+            attrMin = null;
+
+        // Skip already initialized input
+        if ($currentInput.attr('data-nice-number-initialized')) return;
+
+        // Handle max and min values
+        if (
+            maxValue !== undefined &&
+            maxValue !== false
+        ) {
+            attrMax = parseFloat(maxValue);
+        }
+
+        if (
+            minValue !== undefined &&
+            minValue !== false
+        ) {
+            attrMin = parseFloat(minValue);
+        }
+
+        // Fix issue with initial value being < min
+        if (attrMin && !currentInput.value) {
+            $currentInput.val(attrMin);
+        }
+
+        // Generate container
+        var $inputContainer = $('<div/>', {
+            class: 'nice-number',
+        }).insertAfter(currentInput);
+
+        // Generate interval (object so it is passed by reference)
+        var interval = {};
+
+        // Generate buttons
+        var $minusButton = $('<button/>')
+            .attr('type', 'button')
+            .html(settings.buttonDecrement)
+            .on('mousedown mouseup mouseleave', function (event) {
+                changeInterval(event.type, interval, function () {
+                    var currentValue = parseFloat($currentInput.val() || 0);
+                    if (
+                        attrMin == null ||
+                        attrMin < currentValue
+                    ) {
+                        var newValue = currentValue - 1;
+                        $currentInput.val(newValue);
+                        if (settings.onDecrement) {
+                            settings.onDecrement(
+                                $currentInput,
+                                newValue,
+                                settings
+                            );
+                        }
+                    }
+                });
+
+                // Trigger the input event here to avoid event spam
+                if (event.type == 'mouseup' || event.type == 'mouseleave') {
+                    $currentInput.trigger('input');
+                }
+            });
+
+        var $plusButton = $('<button/>')
+            .attr('type', 'button')
+            .html(settings.buttonIncrement)
+            .on('mousedown mouseup mouseleave', function (event) {
+                changeInterval(event.type, interval, function () {
+                    var currentValue = parseFloat($currentInput.val() || 0);
+                    if (
+                        attrMax == null ||
+                        attrMax > currentValue
+                    ) {
+                        var newValue = currentValue + 1;
+                        $currentInput.val(newValue);
+                        if (settings.onIncrement) {
+                            settings.onIncrement(
+                                $currentInput,
+                                newValue,
+                                settings
+                            );
+                        }
+                    }
+                });
+
+                // Trigger the input event here to avoid event spam
+                if (event.type == 'mouseup' || event.type == 'mouseleave') {
+                    $currentInput.trigger('input');
+                }
+            });
+
+        // Remember that we have initialized this input
+        $currentInput.attr('data-nice-number-initialized', true);
+
+        // Append elements
+        switch (settings.buttonPosition) {
+            case 'left':
+                $minusButton.appendTo($inputContainer);
+                $plusButton.appendTo($inputContainer);
+                $currentInput.appendTo($inputContainer);
+                break;
+            case 'right':
+                $currentInput.appendTo($inputContainer);
+                $minusButton.appendTo($inputContainer);
+                $plusButton.appendTo($inputContainer);
+                break;
+            case 'around':
+            default:
+                $minusButton.appendTo($inputContainer);
+                $currentInput.appendTo($inputContainer);
+                $plusButton.appendTo($inputContainer);
+                break;
+        }
+
+        // Nicely size input
+        if (settings.autoSize) {
+            $currentInput.width(
+                $currentInput.val().length + settings.autoSizeBuffer + '5px'
+            );
+            $currentInput.on('keyup input', function () {
+                $currentInput.animate(
+                    {
+                        width:
+                            $currentInput.val().length +
+                            settings.autoSizeBuffer +
+                            '5px'
+                    },
+                    200
+                );
+            });
+        }
+    });
+};
+
+function changeInterval(eventType, interval, callback) {
+    if (eventType == 'mousedown') {
+        interval.timeout = setTimeout(function () {
+            interval.actualInterval = setInterval(function () {
+                callback();
+            }, 100);
+        }, 200);
+        callback();
+    } else {
+        if (interval.timeout) {
+            clearTimeout(interval.timeout);
+        }
+        if (interval.actualInterval) {
+            clearInterval(interval.actualInterval);
+        }
+    }
+}
+})(jQuery);
+
+
+</script>
+<script>
+    $( document ).ready(function() {
+    $('.post-wrapper').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        nextArrow: $('.next'),
+        prevArrow: $('.prev'),
+      });
+});
+</script>
+
+<!-- =================== footer ======================= -->
+    <footer>
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png" alt="">
+            </div>
+            <div class="detail-footer">
+                <p>51 soi ramkhamhaeng, wang thong lang district, phlabpla bangkok 10310
+                    <br>email : samhaofiber@gmail.com
+                    <br>tel : 02-232-0000
+                </p>
+            </div>
+            <div class="icon-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-facebook-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-instagram-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://line.me/th/" target="_blank"><i class="fab fa-line"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-line"></i></a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-company">
+            <p>Samhao Company</p>
+        </div>
+
+    </footer>
+<!-- =================== footer ======================= -->
+</body>
+
+
+</html>

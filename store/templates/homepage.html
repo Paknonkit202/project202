@@ -1,0 +1,1843 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link rel="stylesheet" href="style01.css"> -->
+    <title>homepage</title>
+
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box; 
+    }
+    body{
+        width: 100%;
+        height: 100%;
+       margin: 0px;
+       padding: 0px;
+       overflow-x: hidden;
+       
+    }
+    /* start nav bar */
+    /* ---------- Desktop ---------- */
+    .logo img{
+        height: 2.5rem;
+        margin-top: 1.2rem;
+    }
+    nav{
+      background: #73806C;
+      height: 80px;
+      width: 100%;
+    }
+    label.logo{
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      margin-left: 50px;
+    }
+    .list{
+      float: right;
+      margin-right: 20px;
+    }
+    .list li{
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+    }
+    .list li a{
+      color: white;
+      font-size: 20px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      font-family: 'Didact Gothic', sans-serif;
+      font-weight: 400;
+     
+    }
+    .show-dt:hover{
+      background: white;
+      transition: .5s;
+      border-radius: 20px;
+      color: black;    
+    }
+    #check{
+     display: none;
+    }
+    .logo a:hover{
+      background: none;
+    }
+    .list .show-mb {
+      display: none;
+    }
+    li p{
+      font-family: 'Judson', serif;
+      font-size: 32px;
+      color: white;
+      font-weight: 700;
+    }
+    .line1{
+      margin-top: 2rem;
+      width: 144px;
+      border: 1px white solid;
+    }
+    .iconhead{
+      display: none;
+    }
+    
+    /* ===============end nav bar================ */
+
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 80px 0.6fr 0.5fr 0.4fr 190px ;
+        grid-template-areas: 
+        'nav'
+        'Peak'
+        'Ai'
+        'Nam'
+        'footer';
+    }
+    nav{
+        grid-area: nav;
+    }
+    .head{
+        grid-area: Peak;
+    }
+    footer{
+        grid-area: footer;
+    }
+    .background {
+        height: 600px;
+        background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    }
+    .head h1{
+        color: white;
+        padding-top: 310px;
+        padding-left: 100px;
+        font-size: 104px;
+    }
+    .textunder-onlyphone p{
+        display: none;
+        color: #fff;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+
+
+    .botton button{
+        background-color: #d17c3a;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 18px 48px;
+        text-align: center;
+        font-size: 28px;
+        margin: 4px 100px;
+        cursor: pointer;
+    
+    
+    }
+    .icon-social{
+        float: right;
+        /* border: 1px solid blue; */
+        display: flex; 
+    }
+    .icon-social ul{
+        display: flex;
+        align-items: flex-end;
+        padding-right: 20px;
+        padding-top: 100px;
+    }
+    .icon-social ul li{
+        margin: 0px 1.5rem 0rem 0rem;
+        font-size: 40px;
+       
+    }
+    .icon-social ul li a{
+        color: white;
+    }
+    .head a{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        margin-left: 90%;
+        display: inline-block;
+        margin-top: -100px;
+    }
+    .middle{
+        grid-area: Ai;
+        background-color: #D2BEA9;
+    }
+ 
+    .linemid1{
+        padding-left: 90px;
+        margin-bottom: -30%;
+        
+    }
+    .line1 {
+        margin-top: 10%;
+        border: 1px solid#5B3312;
+        width:280px;
+      }
+    
+      .linemid{
+        padding-left: 30px;
+        margin-bottom: -70%;
+        
+    }
+    .linebot{
+        margin-bottom: 600px;
+
+    }
+
+    /* .textmid1 p{  
+    } */
+    .textmid2 {
+
+        padding-left: 240px;
+        margin-top: 10%;
+    }
+    .linemid hr{
+        overflow-x: hidden;
+        border: 1px solid#5B3312;
+        overflow-y: hidden;
+        width:300px;
+        
+    }
+    .textmid3{
+        margin-top: -20%;
+        padding-left: 220px;
+    }
+    .linebot{
+   
+        padding-right: 10px;
+        margin-bottom: -40%;
+    }
+    .linebot hr{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        border: 1px solid#5B3312;
+        width:300px;
+                
+    }
+    
+
+    .img-center img{
+        border-radius: 1000px;
+        
+    }
+    
+    .img-center img{
+        width: 600px;
+        margin-left: 29%;
+        margin-top: 5%;
+    }
+    .buttonshop {
+        position: static;
+        background-color: #5B3312;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 20px 48px;
+        text-align: center;
+        font-size: 28px;
+        margin: 50px 580px;
+        cursor: pointer;
+    }
+    .content1{
+        position: fixed;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        color: #5B3312;
+        float: left;
+        position: absolute;
+        left: 140px;
+        bottom: -340px;
+       
+    }
+    .content2{
+        position: fixed;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        color: #5B3312;
+        position: absolute;
+        right: 140px;
+        bottom: -210px;
+        
+    }
+    .content3{
+        position: fixed;
+        font-family: 'Didact Gothic', sans-serif;
+            font-weight: 400;
+            font-size: 32px;
+            color: #5B3312;
+            position: absolute;
+            right: 140px;
+            bottom: -420px;
+
+            padding-top: 20%;
+            margin-top: 10%;
+    }
+    .bottom{
+        background: #73806C;
+        width: 100%;
+        height: 400px;
+    }
+
+    .topic1{
+        font-family: 'Judson', serif;
+        text-align: center;
+        color: #fff;
+        font-size: 60px;
+        padding-top: 40px;
+    }
+
+    .line001 {
+        border-top: 0.1px solid white;
+        width:280px;
+        margin-left: 40%;
+        margin-top: 1%;
+        padding-top: 1%;
+      }
+    .text1 p{
+        text-align: center;
+        font-family: 'Didact Gothic', sans-serif;
+        padding-top: 40px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .text2 p{
+        text-align: center;
+        font-family: 'Didact Gothic', sans-serif;
+        color: #fff;
+        font-size: 14px;
+        padding-top: 50px;
+    }
+
+
+/* ================footer======================= */
+.footer{
+
+    background: #73806C;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-footer{
+    float: left;
+    margin-left: 5%;
+    
+}
+.logo-footer img{
+    width: 160px;
+    margin: 2.6rem 0px 0px 0px;
+}
+.detail-footer{
+    display: inline-flex;
+    line-height: 32px;
+    /* border: solid 1px black; */
+    align-items: center;
+    padding-left: 50px;
+}
+.detail-footer p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+}
+.icon-footer{
+    float: right;
+    /* border: 1px solid blue; */
+    display: flex; 
+}
+.icon-footer ul{
+    display: flex;
+    align-items: flex-end;
+}
+.icon-footer ul li{
+    margin: 0px 1.5rem 1rem 0rem;
+    font-size: 40px;
+    align-content: center;
+    justify-content: center;
+}
+.icon-footer ul li a{
+    color: white;
+}
+.icon-footer ul li a:hover, a:active{
+    cursor: pointer;
+    color: black;
+    transition: .5s;
+}
+.footer-company{
+    display: flex;
+    background: white;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.footer-company p{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #A8AD9F;
+}
+
+/* ================footer======================= */
+/* ipad */
+@media (max-width: 768px){
+    nav{
+            background: #73806C;
+            height: 100%;
+            width: 100%;
+        }
+        .logo img{
+            margin-top: 1.2rem;
+            padding: 0px;
+            height: 1.7rem;
+        }
+        .logo a{
+            float: right;
+        }
+        .list{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #73806C;
+            top: 0px; 
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            z-index: 1;
+        }
+        .list li p{
+            margin-top: 50px;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 80px 0.6fr 0.5fr 0.4fr 190px ;
+            grid-template-areas: 
+            'nav'
+            'Peak'
+            'Ai'
+            'Nam'
+            'footer';
+        }
+        
+        .list li{
+            display: block;
+            margin: 40px 10px 0px 10px;
+            line-height: 30px;
+        }
+        .list li a{
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .logo a:active{
+            background: none;
+        }
+        .list li a:hover,a:active{
+            background: none;
+            color: black;
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+        .icon-mb li a{
+            color: white;
+        }
+        .icon-mb li a:active{
+            color: black;
+        }
+        .iconhead{
+            display: flex;
+            margin: -45px 0px 0px 0px;
+            float: right;
+        }
+        .icon-mb{
+            display: flex;
+        }
+        .icon a i{
+            font-size: 20px;
+        }
+        .icon{
+            margin-right: 15px;
+        }
+        .show-dt{
+            display: none;
+        }
+        .list .show-mb{
+            display: inline-block;
+        }
+        label.logo{
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            margin-left: 41%;
+            /* border: 1px solid black; */
+            display: inline-block;
+            margin-top: -100px;
+        }
+        label.logo a{
+            margin: -85px 0px 0px 0px;
+        }
+        li p{
+            font-size: 28px;
+        }
+        .checkbtn {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            z-index: 2;
+        }
+        .line {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+        
+        .line::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+        .line::before {
+            transform: translateY(-8px);
+        }
+        .line::after {
+            transform: translateY(8px);
+        }
+        .checkbtn.open .line {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+            z-index: 1;
+        }
+        .checkbtn.open .line::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+        .checkbtn.open .line::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+        /* end neavbar */
+
+
+        .background {
+            background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+            width: 100px;
+            height: 400px;
+            width: 100%;
+            background-position: center;
+ 
+            background-size: cover;
+            
+        }
+        .head h1{
+            color: white;
+            text-align: center;
+            padding-top: 115px;
+            padding-right: 100px;
+            font-size: 60px;
+        }
+        .head button{
+            background-color: #d17c3a;
+            border: none;
+            color: white;
+            font-family: 'Didact Gothic', sans-serif;
+            padding: 18px 48px;
+
+            text-align: center;
+            font-size: 16px;
+            margin: 19px 297px;
+            cursor: pointer;
+        }
+        .icon-social{
+            display: none;
+        }
+
+        .textunder-onlyphone p{
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            font-family: 'Didact Gothic', sans-serif;
+        }
+        .buttonshop {
+            background-color: #5B3312;
+            border: none;
+            color: white;
+            font-family: 'Didact Gothic', sans-serif;
+            padding: 18px 48px;
+            text-align: center;
+            font-size: 16px;
+            margin: 30px 297px;
+            cursor: pointer;
+        }
+        .img-center img{
+            width: 340px;
+            margin-left: 28%;
+            margin-top: 10%;
+            display: inline;
+            overflow-x: hidden;
+        overflow-y: hidden;
+        }
+        .line001 {
+        border-top: 0.1px solid white;
+        width:280px;
+        margin-left: 240px;
+        margin-top: 20px;
+        padding-top: 30px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+        .content1{
+            font-family: 'Didact Gothic', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #5B3312;
+            float: left;
+            position: absolute;
+            left: 90px;
+            bottom: 320px;
+        }
+        .linemid1{
+            display: none;
+        }
+        .content2{
+            font-family: 'Didact Gothic', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #5B3312;
+            position: absolute;
+            right: 100px;
+            bottom: 360px;
+        }
+        .linemid{
+            display: none;
+        }
+        .content3{
+            font-family: 'Didact Gothic', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                color: #5B3312;
+                position: absolute;
+                right: 100px;
+                bottom: 250px;
+        }
+        .linebot{
+            display: none;
+        }
+
+        .footer{
+            height: 120px;
+            display: inline-block;
+        }
+        .logo-footer{
+            /* border: solid 1px black; */
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .logo-footer img{
+            width: 60px;
+            margin: 0px;
+        }
+        .detail-footer{
+            margin: 55px 20px 0px 20px ;
+            line-height: 12px;
+            display: block;
+            /* border: 1px solid orange; */
+            padding: 0px;
+        }
+        .detail-footer p{
+            font-size: 9px;
+        }
+        .icon-footer{
+            /* border: green 1px solid; */
+            margin-top: -20px;
+            margin-right: 0.5rem;
+        }
+        .icon-footer ul li{
+            margin: 0px 0.5rem 0.5rem 0rem;
+            font-size: 20px;
+        }
+        .footer-company{
+            height: 25px;
+            /* border: solid 1px red; */
+        }
+        .footer-company p{
+            font-size: 13px;
+        }
+        .grid-right{
+            padding-left: 0px;
+        }
+}
+
+
+
+
+
+@media (max-width: 414px){
+    nav{
+        background: #73806C;
+        height: 70px;
+        width: 100%;
+    }
+    .logo img{
+        margin-top: 1.2rem;
+        padding: 0px;
+        height: 1.7rem;
+    }
+    .logo a{
+        float: right;
+    }
+    .list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #73806C;
+        top: 0px; 
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    .list li p{
+        margin-top: 50px;
+    }
+    .list li{
+        display: block;
+        margin: 40px 10px 0px 10px;
+        line-height: 30px;
+    }
+    .list li a{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .logo a:active{
+        background: none;
+    }
+    .list li a:hover,a:active{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .icon-mb li a{
+        color: white;
+    }
+    .icon-mb li a:active{
+        color: black;
+    }
+    .iconhead{
+        display: flex;
+        margin: -45px 0px 0px 0px;
+        float: right;
+    }
+    .icon-mb{
+        display: flex;
+    }
+    .icon a i{
+        font-size: 20px;
+    }
+    .icon{
+        margin-right: 15px;
+    }
+    .show-dt{
+        display: none;
+    }
+    .list .show-mb{
+        display: inline-block;
+    }
+    label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        margin-left: 41%;
+        /* border: 1px solid black; */
+        display: inline-block;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: -85px 0px 0px 0px;
+    }
+    
+    li p{
+        font-size: 28px;
+    }
+    .checkbtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+    }
+    .line {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before {
+        transform: translateY(-8px);
+    }
+    .line::after {
+        transform: translateY(8px);
+    }
+    .checkbtn.open .line {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+        z-index: 1;
+    }
+    .checkbtn.open .line::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .checkbtn.open .line::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+    /* end neavbar */
+    /* start at  first*/
+
+    
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 70px repeat(3,1fr) ;
+        grid-template-areas: 
+        'nav'
+        'Peak'
+        'Ai'
+        'Nam'
+        'footer';
+    }
+    nav{
+        grid-area: nav;
+    }
+    .head{
+        grid-area: Peak;
+    }
+    .background {
+        background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+        height: 850px;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    }
+    .head h1{
+        color: white;
+        padding-top: 410px;
+        padding-left: 100px;
+        font-size: 124px;
+    }
+    
+    .img-center img{
+        width: 260px;
+        margin-left: 20%;
+        margin-top: 15%;
+    }
+    .textunder-onlyphone p{
+        color: #fff;
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 10px;
+    }
+    /* end at  first*/
+    .background {
+        background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+        width: 100px;
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        
+    }
+    .head h1{
+        color: white;
+        text-align: center;
+        padding-top: 115px;
+        padding-right: 110px;
+        font-size: 30px;
+    }
+    .head button{
+        background-color: #d17c3a;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 8px 43px;
+        text-align: center;
+        font-size: 18px;
+        margin: 50px 117px;
+        cursor: pointer;
+    }
+    .img-center img{
+        width: 200px;
+        margin-left: 26%;
+        margin-top: 15%;
+    }
+    .buttonshop {
+        background-color: #5B3312;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 8px 33px;
+        text-align: center;
+        font-size: 18px;
+        margin: 50px 117px;
+        cursor: pointer;
+    }
+    .icon-social{
+        display: none;
+    }
+    .content1{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        float: left;
+        position: absolute;
+        left: 25px;
+        bottom: 110px;
+    }
+    .content2{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        position: absolute;
+        right: 30px;
+        bottom: 140px;
+       
+    }
+    .content3{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        position: absolute;
+        right: 30px;
+        bottom: 60px;
+    }
+    .linemid1{
+        display: none;
+    }
+    .linemid{
+        display: none;
+    }
+    .linebot{
+        display: none;
+    }
+    .line001{
+        border-top: 0.1px solid white;
+        margin-left: 16%;
+        margin-top: 3%;
+        padding-top: 1%;
+    }
+    .footer{
+        height: 120px;
+        display: inline-block;
+    }
+    .logo-footer{
+        /* border: solid 1px black; */
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .logo-footer img{
+        width: 60px;
+        margin: 0px;
+    }
+    .detail-footer{
+        margin: 55px 20px 0px 20px ;
+        line-height: 12px;
+        display: block;
+        /* border: 1px solid orange; */
+        padding: 0px;
+    }
+    .detail-footer p{
+        font-size: 9px;
+    }
+    .icon-footer{
+        /* border: green 1px solid; */
+        margin-top: -20px;
+        margin-right: 0.5rem;
+    }
+    .icon-footer ul li{
+        margin: 0px 0.5rem 0.5rem 0rem;
+        font-size: 20px;
+    }
+    .footer-company{
+        height: 25px;
+        /* border: solid 1px red; */
+    }
+    .footer-company p{
+        font-size: 13px;
+    }
+    .grid-right{
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 375px){
+    nav{
+        background: #73806C;
+        
+        width: 100%;
+    }
+    .logo img{
+        margin-top: 1.2rem;
+        padding: 0px;
+        height: 1.7rem;
+    }
+    .logo a{
+        float: right;
+    }
+    .list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #73806C;
+        top: 0px; 
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    .list li p{
+        margin-top: 50px;
+    }
+    .list li{
+        display: block;
+        margin: 40px 10px 0px 10px;
+        line-height: 30px;
+    }
+    .list li a{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .logo a:active{
+        background: none;
+    }
+    .list li a:hover,a:active{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .icon-mb li a{
+        color: white;
+    }
+    .icon-mb li a:active{
+        color: black;
+    }
+    .iconhead{
+        display: flex;
+        margin: -45px 0px 0px 0px;
+        float: right;
+    }
+    .icon-mb{
+        display: flex;
+    }
+    .icon a i{
+        font-size: 20px;
+    }
+    .icon{
+        margin-right: 15px;
+    }
+    .show-dt{
+        display: none;
+    }
+    .list .show-mb{
+        display: inline-block;
+    }
+    label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        margin-left: 41%;
+        /* border: 1px solid black; */
+        display: inline-block;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: -85px 0px 0px 0px;
+    }
+    li p{
+        font-size: 28px;
+    }
+    .checkbtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+    }
+    .line {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before {
+        transform: translateY(-8px);
+    }
+    .line::after {
+        transform: translateY(8px);
+    }
+    .checkbtn.open .line {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+        z-index: 1;
+    }
+    .checkbtn.open .line::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .checkbtn.open .line::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+    /* end neavbar */
+    /* start at  first*/
+
+    .img-center img{
+        width: 200px;
+        margin-left: 25%;
+        margin-top: 15%;
+    }
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0px repeat(3,1fr) ;
+        grid-template-areas: 
+        'nav'
+        'Peak'
+        'Ai'
+        'Nam'
+        'footer';
+    }
+    nav{
+        grid-area: nav;
+    }
+    .head{
+        grid-area: Peak;
+    }
+    .background {
+        background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+        height: 850px;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    }
+    .head h1{
+        color: white;
+        text-align: center;
+        margin-top: 70px;
+    }
+    .textunder-onlyphone p{
+        color: #fff;
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 8px;
+    }
+    .line001{
+        border-top: 0.1px solid white;
+        margin-left: 13%;
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+
+
+    /* end at  first*/
+    .background {
+        background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+        width: 100px;
+        height: 400px;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        
+    }
+    .head h1{
+        color: white;
+        text-align: center;
+        padding-top: 115px;
+        padding-right: 100px;
+        font-size: 26px;
+    }
+    .head button{
+        background-color: #d17c3a;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 8px 43px;
+        text-align: center;
+        font-size: 18px;
+        margin: 50px 100px;
+        cursor: pointer;
+    }
+
+    .img-center img{
+        width: 180px;
+        margin-left: 25%;
+        margin-top: 25%;
+    }
+    .buttonshop{
+        background-color: #5B3312;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 8px 40px;
+        text-align: center;
+        font-size: 18px;
+        margin: 50px 104.5px;
+    }
+    .content1{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        float: left;
+        position: absolute;
+        left: 26px;
+        bottom: 230px;
+    }
+    .content2{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        position: absolute;
+        right: 30px;
+        bottom: 250px;
+       
+    }
+    .content3{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        position: absolute;
+        right: 30px;
+        bottom: 190px;
+    }
+    
+    .icon-social{
+        display: none;
+    }
+
+
+    .footer{
+        height: 120px;
+        display: inline-block;
+    }
+    .logo-footer{
+        /* border: solid 1px black; */
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .logo-footer img{
+        width: 60px;
+        margin: 0px;
+    }
+    .detail-footer{
+        margin: 55px 20px 0px 20px ;
+        line-height: 12px;
+        display: block;
+        /* border: 1px solid orange; */
+        padding: 0px;
+    }
+    .detail-footer p{
+        font-size: 9px;
+    }
+    .icon-footer{
+        /* border: green 1px solid; */
+        margin-top: -20px;
+        margin-right: 0.5rem;
+    }
+    .icon-footer ul li{
+        margin: 0px 0.5rem 0.5rem 0rem;
+        font-size: 20px;
+    }
+    .footer-company{
+        height: 25px;
+        /* border: solid 1px red; */
+    }
+    .footer-company p{
+        font-size: 13px;
+    }
+    .grid-right{
+        padding-left: 0px;
+    }
+}
+
+@media (max-width:375px) and (max-height:667px) {
+    nav{
+        background: #73806C;
+        width: 100%;
+    }
+    .logo img{
+        margin-top: 1.2rem;
+        padding: 0px;
+        height: 1.7rem;
+    }
+    .logo a{
+        float: right;
+    }
+    .list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #73806C;
+        top: 0px; 
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    .list li p{
+        margin-top: 50px;
+    }
+    .list li{
+        display: block;
+        margin: 40px 10px 0px 10px;
+        line-height: 30px;
+    }
+    .list li a{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .logo a:active{
+        background: none;
+    }
+    .list li a:hover,a:active{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .icon-mb li a{
+        color: white;
+    }
+    .icon-mb li a:active{
+        color: black;
+    }
+    .iconhead{
+        display: flex;
+        margin: -45px 0px 0px 0px;
+        float: right;
+    }
+    .icon-mb{
+        display: flex;
+    }
+    .icon a i{
+        font-size: 20px;
+    }
+    .icon{
+        margin-right: 15px;
+    }
+    .show-dt{
+        display: none;
+    }
+    .list .show-mb{
+        display: inline-block;
+    }
+    label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        margin-left: 41%;
+        /* border: 1px solid black; */
+        display: inline-block;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: -85px 0px 0px 0px;
+    }
+    li p{
+        font-size: 28px;
+    }
+    .checkbtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+    }
+    .line {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before {
+        transform: translateY(-8px);
+    }
+    .line::after {
+        transform: translateY(8px);
+    }
+    .checkbtn.open .line {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+        z-index: 1;
+    }
+    .checkbtn.open .line::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .checkbtn.open .line::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+    /* end neavbar */
+    /* start at  first*/
+
+    .img-center img{
+        width: 200px;
+        margin-left: 25%;
+        margin-top: 15%;
+    }
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0px repeat(3,1fr) ;
+        grid-template-areas: 
+        'nav'
+        'Peak'
+        'Ai'
+        'Nam'
+        'footer';
+    }
+    nav{
+        grid-area: nav;
+    }
+    .head{
+        grid-area: Peak;
+    }
+    .background {
+        background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+        height: 850px;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    }
+    .head h1{
+        color: white;
+   
+        text-align: center;
+   
+    }
+    .textunder-onlyphone p{
+        color: #fff;
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 8px;
+    }
+
+
+    /* end at  first*/
+    .background {
+        background-image: url("https://cdn.discordapp.com/attachments/821748947684294709/835746661623398430/1327252702.jpg");
+        width: 100px;
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        
+    }
+    .head h1{
+        color: white;
+        text-align: center;
+        padding-top: 115px;
+        padding-right: 100px;
+        font-size: 28px;
+    }
+    .head button{
+        background-color: #d17c3a;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 8px 43px;
+        text-align: center;
+        font-size: 18px;
+        margin: 50px 100px;
+        cursor: pointer;
+    }
+
+    .img-center img{
+        width: 180px;
+        margin-left: 25%;
+        margin-top: 25%;
+    }
+    .buttonshop{
+        background-color: #5B3312;
+        border: none;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        padding: 8px 40px;
+        text-align: center;
+        font-size: 18px;
+        margin: 50px 104.5px;
+    }
+    .content1{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        float: left;
+        position: absolute;
+        left: 26px;
+        bottom: 20px;
+    }
+    .content2{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+       
+    }
+    .content3{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: #5B3312;
+        position: absolute;
+        right: 30px;
+        bottom: -30px;
+    }
+    
+    .icon-social{
+        display: none;
+    }
+    .bottom{
+        background: #73806C;
+        width: 100%;
+        height: 400px;
+        height: 100%;
+    }
+
+
+    .footer{
+        height: 120px;
+        display: inline-block;
+    }
+    .logo-footer{
+        /* border: solid 1px black; */
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .logo-footer img{
+        width: 60px;
+        margin: 0px;
+    }
+    .detail-footer{
+        margin: 55px 20px 0px 20px ;
+        line-height: 12px;
+        display: block;
+        /* border: 1px solid orange; */
+        padding: 0px;
+    }
+    .detail-footer p{
+        font-size: 9px;
+    }
+    .icon-footer{
+        /* border: green 1px solid; */
+        margin-top: -20px;
+        margin-right: 0.5rem;
+    }
+    .icon-footer ul li{
+        margin: 0px 0.5rem 0.5rem 0rem;
+        font-size: 20px;
+    }
+    .footer-company{
+        height: 25px;
+        /* border: solid 1px red; */
+    }
+    .footer-company p{
+        font-size: 13px;
+    }
+    .grid-right{
+        padding-left: 0px;
+    }
+}
+
+</style>
+<body>
+    <!-- =================== nav ======================= -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <div class="line-1 line"></div>
+        </label>
+        <label class="logo"><a href="#"><img
+                    src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png"
+                    alt=""></a></label>
+        <div class="iconhead">
+            <ul class="icon-mb">
+                <li class="icon1 icon">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="icon2 icon">
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul class="list">
+            <li class="show-mb">
+                <p>Menu</p>
+                <div class="line1"></div>
+            </li>
+            <li><a class="show-mb" href="#">dried samhao for package cushioning</a></li>
+            <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
+            <li><a class="show-mb" href="#">About Us</a></li>
+            <li><a class="show-mb" href="#">Contact Us</a></li>
+            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="product">Shop</a></li>
+            <li><a class="show-dt" href="#">About</a></li>
+            <li><a class="show-dt" href="contact">Contact</a></li>
+            <li><a class="show-dt" href="shipping">
+                    <i class="fa fa-shopping-cart"></i> My Cart
+                </a></li>
+            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                </a></li>
+        </ul>
+    </nav>
+    <script src="navbar.js"></script>
+    <!-- =================== end nav======================= -->
+
+
+    <!-- =================== start content================= -->
+
+
+    <div class="head">
+        <div class="background">
+            <h1>Dried Samhao</h1>
+            <div class="textunder-onlyphone">
+                <p>made from 100% natural ingredients</p>
+            </div>
+
+            <div class="botton">
+            
+                <div class="icon-social">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <!-- <a href="#" ><i class="fab fa-facebook-square"></i></a> -->
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank"><i
+                                    class="fab fa-instagram-square"></i></a>
+                            <!-- <a href="#" ><i class="fab fa-instagram-square"></i></a> -->
+                        </li>
+                        <li>
+                            <a href="https://line.me/th/" target="_blank"><i class="fab fa-line"></i></a>
+                            <!-- <a href="#" ><i class="fab fa-line"></i></a> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="middle">
+        <div class="content1">
+            <div class="textmid1">
+                <p>Can use as <br>a package <br> cushioning</p>
+            </div>
+            <!-- <div class="linemid1">
+                <div class="line1">
+
+                </div>
+            </div> -->
+        </div>
+
+
+        <div class="content2">
+            <div class="textmid2">
+                <p>Can use as <br> a charcoal</p>
+            </div>
+            <!-- <div class="linemid">
+                <div class="line1">
+
+                </div>
+            </div> -->
+        </div>
+
+
+        <div class="content3">
+            <div class="textmid3">
+                <p>Can use as <br>
+                    a fertilizer</p>
+            </div>
+
+            <!-- <div class="linebot">
+                <div class="line1">
+
+                </div>
+            </div> -->
+        </div>
+        <div class="img-center">
+            <img src="https://cdn.discordapp.com/attachments/821748947684294709/835768137336750110/S__9339107.jpg"
+                alt="">
+        </div>
+        <div class="buttonshop">
+            <a type="button" href="product" style="color: #fff;">Shop Now!</a>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="topic1">
+            <h>About</h>
+            <div class="line001">
+
+            </div>
+        </div>
+
+        <div class="text1">
+            <p>WATER HYACINTH HAS BECOME THE NO.1 <br>ENVIRONMENTAL NUISANCE.</p>
+        </div>
+
+        <div class="text2">
+            <p>WE ARE PROVIDING MAKE USE OF WHAT IS CALLED NATURAL <br>WASTE" BY CREATING NEW MARKETABLE PRODUCTS.</p>
+        </div>
+
+    </div>
+    
+    <!-- =================== end content================= -->
+
+    <!-- =================== start footer ================= -->
+    <footer>
+        <div class="linewhite">
+                <hr class="underline">
+            </div>
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png"
+                    alt="">
+            </div>
+            <div class="detail-footer">
+                <p>51 soi ramkhamhaeng, wang thong lang district, phlabpla bangkok 10310
+                    <br>email : samhaofiber@gmail.com
+                    <br>tel : 02-232-0000
+                </p>
+            </div>
+            <div class="icon-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-facebook-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-instagram-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://line.me/th/" target="_blank"><i class="fab fa-line"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-line"></i></a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-company">
+            <p>Samhao Company</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

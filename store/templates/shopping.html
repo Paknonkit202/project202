@@ -1,0 +1,1430 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="page_shopping_cart.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript"> 
+        $(function(){
+            $('input[type="number"]').niceNumber();
+        });
+    </script>
+    
+    <title>Shopping Cart</title>
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    /* justify-items: center; */
+}
+body{
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 0.1fr 190px;
+    grid-template-areas: 
+    'nav'
+    'shopping'
+    'footer';
+}
+nav{
+    position: fixed;
+    z-index: 1;
+    grid-area: nav;
+}
+section{
+    grid-area: shopping;
+}
+footer{
+    grid-area: footer;
+}
+
+/* ---------- Desktop ---------- */
+
+/* =============navbar============= */
+.logo img{
+    height: 2.5rem;
+    margin-top: 1.2rem;
+}
+nav{
+  background: #73806C;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  margin-left: 50px;
+}
+.list{
+  float: right;
+  margin-right: 20px;
+}
+.list li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+.list li a{
+  color: white;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: Didact Gothic;
+  font-weight: 400;
+}
+.show-dt:hover{
+  background: white;
+  transition: .5s;
+  border-radius: 20px;
+  color: black;    
+}
+#check{
+ display: none;
+}
+.logo a:hover{
+  background: none;
+}
+.list .show-mb {
+  display: none;
+}
+li p{
+  font-family: 'Judson', serif;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+.line1{
+  margin-top: 2rem;
+  width: 144px;
+  border: 1px white solid;
+}
+.iconhead{
+  display: none;
+}
+
+/* ==========Grid Shopping========== */
+section{
+    background: #EFE2D4;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 130px 0.4fr 0.4fr;
+    grid-template-areas: 
+    'top top'
+    'left right'
+    'button right';
+}
+.top{
+    grid-area: top;
+}
+.content-left{
+    grid-area: left;
+}
+.content-right{
+    grid-area: right;
+}
+.next-cancel{
+    grid-area: button;
+}
+
+/* ==========Shopping========== */
+.top{
+    display: flex;
+    background: #B79E84;
+    width: 100%;
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+}
+.top div{
+    padding: 0px 6%;
+}
+.top div p{
+    font-family: 'Judson', serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+.shopping-cart{
+    border-bottom: 1px solid #5B3312;
+}
+.shopping-cart p{
+    color:#5B3312;
+    margin: 20px 0px ;
+}
+.shipping-detail,
+.payment-option{
+    border-bottom: 1px solid white;
+}
+.shipping-detail p,
+.payment-option p{
+    color: white;
+    margin: 20px 0px;
+}
+.content-left{
+    margin: 40px 5% 0 5%;
+}
+.title-left{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #5B3312;
+}
+.title-left p{
+    font-family: 'Judson', serif;
+    font-size: 46px;
+    color: #5B3312;
+}
+
+/* ==========Grid Content Left========== */
+.detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.6fr 0.4fr;
+    grid-template-areas: 
+    'pic detail'
+    'pic price';
+}
+.pic{
+    grid-area: pic;
+}
+.detail-product{
+    grid-area: detail;
+}
+.quantity{
+    grid-area: price;
+}
+
+.detail{
+    box-sizing: border-box;
+    margin-top: 3%;
+}
+.pic{
+    margin-right: 25px;
+}
+.pic img{
+    height: auto;
+    width: 100%;
+}
+.detail-product{
+    color: #5B3312;
+}
+.product{
+    font-family: 'Judson', serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+.price{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* ==========ปุ่ม========== */
+.quantity{
+    display: block;
+    position: relative;
+}
+.quantity p{
+    font-size: 22px;
+    color: #5B3312
+}
+.quantity form input{
+    border: 1px solid #5B3312;
+    outline: none;
+    padding: 10px;
+    background: #EFE2D4;
+    color: #5B3312;
+    width: 80%;
+    text-align: center;
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Judson', serif;
+}
+.quantity form input::-webkit-inner-spin-button,
+.quantity form input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.nice-number{
+    display: inline-flex;
+    justify-content: stretch;
+    margin-top: 3%;
+}
+.nice-number button{
+    color: #5B3312;
+    background: #B79E84;
+    width: 40px;
+    border: 1px solid #5B3312;
+    font-size: 20px;
+    outline: none;
+    text-align: center;
+}
+.nice-number button:hover{
+    cursor: pointer;
+}
+
+/* ==========Content Reight========== */
+.title-right{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #5B3312;
+}
+.title-right p{
+    font-family: 'Judson', serif;
+    font-size: 46px;
+    color: #5B3312;
+}
+.content-right{
+    margin: 40px 10% 0 5% ;
+}
+.coupon-code{
+    border-bottom: 1px solid #5B3312;
+}
+.coupon-code p, .subtotal p, .shipping p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #5B3312; 
+}
+.coupon-code p{
+    margin: 5% 0;
+}
+.sub-ship{
+    padding: 5% 0;
+    border-bottom:1px solid #5B3312;
+}
+.subtotal, .shipping, .total{
+    display: flex;
+    justify-content: space-between;
+}
+.total{
+    padding: 5% 0;
+    font-family: 'Judson', serif;
+    font-size: 0px;
+}
+.total p{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    color: #5B3312;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.next-cancel{
+    margin: 2% 0 0 5%;
+}
+#next{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    padding: 1% 0;
+    background: #5B3312;
+    color: white;
+    text-align: center;
+    width: 17%;
+    border: none;
+}
+#cancel{
+    margin-left: 1%;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    width: 17%;
+    padding: 1% 0;
+    background: #B79E84;
+    color: #5B3312;
+    text-align: center;
+    border: none;
+}
+
+/* ==========footer========== */
+footer{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.footer{
+    background: #73806C;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-footer{
+    float: left;
+    margin-left: 5%;
+}
+.logo-footer img{
+    width: 160px;
+    margin: 2.6rem 0px 0px 0px;
+}
+.detail-footer{
+    display: inline-flex;
+    line-height: 32px;
+    align-items: center;
+    padding-left: 50px;
+}
+.detail-footer p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+}
+.icon-footer{
+    float: right;
+    display: flex; 
+}
+.icon-footer ul{
+    display: flex;
+    align-items: flex-end;
+}
+.icon-footer ul li{
+    margin: 0px 1.5rem 1rem 0rem;
+    font-size: 40px;
+    align-content: center;
+    justify-content: center;
+}
+.icon-footer ul li a{
+    color: white;
+}
+.icon-footer ul li a:hover, a:active{
+    cursor: pointer;
+    color: black;
+    transition: .5s;
+}
+.footer-company{
+    display: flex;
+    background: white;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-company p{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #A8AD9F;
+}
+
+@media (max-width: 952px){
+    /* ==========navbar========== */
+    .logo img{
+        margin-left: 0;
+        height: 2rem;
+        margin-top: 1.5rem;
+    }
+    .list li a{
+        font-size: 16px;
+    }
+
+    /* ==========Shopping========== */
+    .top{
+        height: 110px;
+    }
+    .top div{
+        padding: 0px 5%;
+    }
+    .top div p{
+        font-size: 28px;
+    }
+
+    /* ==========Content Left========== */
+    .content-left{
+        margin: 0px 5% 0 5%;
+    }
+    .title-left p{
+        font-size: 44px;
+    }
+    .detail{
+        margin-top: 3%;
+    }
+    .pic{
+        margin-right: 15px;
+    }
+    .product{
+        font-size: 20px;
+    }
+    .price{
+        font-size: 38px;
+    }
+    
+    /* ==========ปุ่ม========== */
+    .quantity p{
+        font-size: 20px;
+    }
+    .quantity form input{
+        padding: 7px;
+        font-size: 14px;
+    }
+    .nice-number button{
+        width: 35px;
+        font-size: 18px;
+    }
+    
+    /* ==========Content Reight========== */
+    .title-right{
+        padding-bottom: 20px;
+    }
+    .title-right p{
+        font-size: 44px;
+    }
+    .content-right{
+        margin: 0px 10% 0 5% ;
+    }
+    .coupon-code p, .subtotal p, .shipping p{
+        font-size: 23px;
+    }
+    .coupon-code p{
+        margin: 5% 0;
+    }
+    .sub-ship{
+        padding: 5% 0;
+    }
+    .total{
+        padding: 5% 0;
+    }
+    .total p{
+        font-size: 38px;
+    }
+    .next-cancel{
+        margin: 2% 0 0 5%;
+    }
+    #next{
+        font-size: 18px;
+    }
+    #cancel{
+        font-size: 18px;
+    }
+
+    /* ==========Footer========== */
+    .logo-footer{
+        margin-left: 4%;
+    }
+    .logo-footer img{
+        width: 120px;
+        margin: 3rem 0px 0px 0px;
+    }
+    .detail-footer{
+        box-sizing: border-box;
+        padding: 0px 0px 0px 4%;
+    }
+    .detail-footer p{
+        font-size: 16px;
+        padding-right: 0px;
+    }
+    .icon-footer ul li{
+        margin: 0px 1rem 1rem 0rem;
+        font-size: 32px;
+    }
+    .footer-company p{
+        font-size: 22px;
+    }
+
+/* ---------- iPhone6/7/8 - iPhoneX - iPhone6/7/8 Plus ---------- */
+@media (max-width: 858px){
+    /* ==========Grid========== */
+    body{
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 70px 1fr 145px;
+        grid-template-areas: 
+        'nav'
+        'shopping'
+        'footer';
+    }
+    nav{
+        grid-area: nav;
+    }
+    section{
+        grid-area: shopping;
+    }
+    footer{
+        grid-area: footer;
+    }
+
+    /* ==========navbar========== */
+    nav{
+        background: #73806C;
+        height: 70px;
+        width: 100%;
+    }
+    .logo img{
+        margin-top: 1.2rem;
+        padding: 0px;
+        height: 1.7rem;
+    }
+    .logo a{
+        float: right;
+    }
+    .list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #73806C;
+        top: 0px; 
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    .list li p{
+        margin-top: 50px;
+    }
+    .list li{
+        display: block;
+        margin: 40px 10px 0px 10px;
+        line-height: 30px;
+    }
+    .list li a{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .logo a:active{
+        background: none;
+    }
+    .list li a:hover,a:active{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .icon-mb li a{
+        color: white;
+    }
+    .icon-mb li a:active{
+        color: black;
+    }
+    .iconhead{
+        display: flex;
+        margin: -45px 0px 0px 0px;
+        float: right;
+    }
+    .icon-mb{
+        display: flex;
+    }
+    .icon a i{
+        font-size: 20px;
+    }
+    .icon{
+        margin-right: 15px;
+    }
+    .show-dt{
+        display: none;
+    }
+    .list .show-mb{
+        display: inline-block;
+    }
+    label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        margin-left: 41%;
+        /* border: 1px solid black; */
+        display: inline-block;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: -85px 0px 0px 0px;
+    }
+    li p{
+        font-size: 28px;
+    }
+    .checkbtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+    }
+    .line {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before {
+        transform: translateY(-8px);
+    }
+    .line::after {
+        transform: translateY(8px);
+    }
+    .checkbtn.open .line {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+        z-index: 1;
+    }
+    .checkbtn.open .line::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .checkbtn.open .line::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    
+    /* ==========Grid Shopping========== */
+    section{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 0.5fr 0.5fr 0.1fr;
+        grid-template-areas: 
+        'top'
+        'left'
+        'right'
+        'button';       
+    }
+    .top{
+        grid-area: top;
+    }
+    .content-left{
+        grid-area: left;
+    }
+    .content-right{
+        grid-area: right;
+    }
+    .next-cancel{
+        grid-area: button;
+    }
+
+    /* ==========Shopping========== */
+    /* Top */
+    .top{
+        width: 100%;
+        height: 75px;
+    }
+    .top div{
+        padding: 0px 2%;
+    }
+    .top div p{
+        font-size: 16px;
+    }
+    .shopping-cart p{
+        margin: 10px 0px ;
+    }
+    .shipping-detail p,
+    .payment-option p{
+        margin: 10px 0px;
+    }
+
+    /* ==========Grid Content Left========== */
+    .detail{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'pic product'
+        'quantity quantity';
+    }
+    .pic{
+        grid-area: pic;
+    }
+    .detail-product{
+        grid-area: product;
+    }
+    .quantity{
+        grid-area: quantity;
+    }
+    .content-left{
+        margin: 20px 7% 0 7%;
+    }
+    .title-left{
+        padding-bottom: 10px;
+    }
+    .title-left p{
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .detail{
+        margin-top: 5%;
+    }
+    .pic{
+        margin-right: 20px;
+    }
+    .product{
+        font-size: 17px;
+    }
+    .price{
+        font-size: 30px;
+    }
+
+    /* ==========ปุ่ม========== */
+    .quantity{
+        text-align: center;
+        margin-top: 5%;
+    }
+    .quantity p{
+        font-size: 17px;
+    }   
+    .quantity form input{
+        font-size: 14px;
+    }
+    .nice-number{
+        margin-top: 3%;
+    }
+    .nice-number button{
+        width: 30px;
+        font-size: 16px;
+    }
+
+    /* ==========Content Reight========== */
+    .title-right{
+        display: none;
+    }
+    .content-right{
+        margin: 0 7% 0 7% ;
+    }
+    .coupon-code{
+        border-top: 1px solid #5B3312;
+        border-bottom: 1px solid #5B3312;
+    }
+    .coupon-code p, .subtotal p, .shipping p{
+        font-size: 15px;
+    }
+    .coupon-code p{
+        margin: 3% 0;
+    }   
+    .sub-ship{
+        padding: 3% 0;
+    }
+    .total{
+        padding: 3% 0;
+        border-bottom: 1px solid #5B3312;
+    }
+    .total p{
+        font-size: 30px;
+    }
+    
+    .next-cancel{
+        margin: 10% 0 15% 0;
+        text-align: center;
+    }
+    #next{
+        font-size: 16px;
+        padding: 2% 0;
+        width: 25%;
+    }
+    #cancel{
+        font-size: 16px;
+        width: 25%;
+        padding: 2% 0;
+    } 
+    #piece{
+        padding: 6px;
+    }  
+    
+    /* ==========footer========== */
+    footer{
+        width: 100%;
+    }
+    .footer{
+        height: 120px;
+        display: inline-block;
+    }
+    .logo-footer{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .logo-footer img{
+        width: 60px;
+        margin: 0px;
+    }
+    .detail-footer{
+        margin: 55px 20px 0px 20px ;
+        line-height: 12px;
+        display: block;
+        padding: 0px;
+    }
+    .detail-footer p{
+        font-size: 9px;
+    }
+    .icon-footer{
+        margin-top: -20px;
+        margin-right: 0.5rem;
+    }
+    .icon-footer ul li{
+        margin: 0px 0.5rem 0.5rem 0rem;
+        font-size: 20px;
+    }
+    .footer-company{
+        height: 25px;
+    }
+    .footer-company p{
+        font-size: 13px;
+    }
+
+/* ----------  iPhone5/SE ---------- */
+@media (max-width: 350px){
+    /* ==========Grid========== */
+    body{
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 1fr 120px;
+        grid-template-areas: 
+        'nav'
+        'shopping'
+        'footer';
+    }
+
+    /* ==========navbar========== */
+    nav{
+        height: 50px;
+    }
+    .logo img{
+        height: 1.6rem;
+    }
+    .iconhead{
+        margin: -35px 0px 0px 0px;
+    }
+    .icon a i{
+        font-size: 16px;
+    }
+    .icon{
+        margin-right: 13px;
+    }
+    label.logo{
+        margin-left: 40%;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: 35px 0px 0px 0px;
+    }
+    .list li a{
+        font-size: 16px;
+        padding: 0px 13px;        
+    }
+    .checkbtn {
+        width: 50px;
+        height: 50px;
+    }
+    .line {
+        width: 20px;
+        height: 2px;
+    }
+    .line::before,
+    .line::after {
+        width: 20px;
+        height: 2px;
+    }
+    .line::before {
+        transform: translateY(-6px);
+    }
+    .line::after {
+        transform: translateY(6px);
+    }
+
+    /* ==========Grid Shopping========== */
+    section{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 0.5fr 0.5fr 0.1fr;
+        grid-template-areas: 
+        'top'
+        'left'
+        'right'
+        'button';       
+    }
+    .top{
+        grid-area: top;
+    }
+    .content-left{
+        grid-area: left;
+    }
+    .content-right{
+        grid-area: right;
+    }
+    .next-cancel{
+        grid-area: button;
+    }
+
+    /* ==========Shopping========== */
+    /* Top */
+    .top{
+        width: 100%;
+        height: 65px;
+    }
+    .top div{
+        padding: 0px 2%;
+    }
+    .top div p{
+        font-size: 14px;
+    }
+    .shopping-cart p{
+        margin: 7px 0px ;
+    }
+    .shipping-detail p,
+    .payment-option p{
+        margin: 7px 0px;
+    }
+    /* Content Left */
+    .content-left{
+        margin: 10px 7% 0 7%;
+    }
+    .title-left{
+        padding-bottom: 10px;
+    }
+    .title-left p{
+        font-size: 28px;
+    }
+    .detail{
+        margin-top: 5%;
+    }
+    .pic{
+        margin-right: 20px;
+    }
+    .product{
+        font-size: 15px;
+    }
+    .price{
+        font-size: 28px;
+    }
+
+    /* ==========ปุ่ม========== */
+    .quantity p{
+        font-size: 15px;
+    }   
+    .quantity form input{
+        font-size: 13px;
+    }
+    .nice-number button{
+        width: 25px;
+        font-size: 15px;
+    }
+    #piece{
+        padding: 5px;
+    }
+
+    /* ==========Content Reight========== */
+    .content-right{
+        margin: 0 7% 0 7% ;
+    }
+    .coupon-code p, .subtotal p, .shipping p{
+        font-size: 13px;
+    }
+    .total p{
+        font-size: 28px;
+    }
+    #next{
+        font-size: 15px;
+    }
+    #cancel{
+        font-size: 15px;
+    }   
+
+    /* ==========footer========== */
+    .footer{
+        height: 100px;
+    }
+    .logo-footer{
+        margin: 15px 0px 0px 15px;
+    }
+    .logo-footer img{
+        width: 40px;
+    }
+    .detail-footer{
+        margin: 40px 15px 0px 15px ;
+        line-height: 10px;
+    }
+    .detail-footer p{
+        font-size: 8px;
+    }
+    .icon-footer{
+        margin-top: -10px;
+    }
+    .icon-footer ul li{
+        font-size: 16px;
+    }
+    .footer-company{
+        height: 20px;
+    }
+    .footer-company p{
+        font-size: 12px;
+    }
+}
+}}
+
+</style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <div class="line-1 line"></div>
+        </label>
+        <label class="logo"><a href="#"><img
+                    src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png"
+                    alt=""></a></label>
+        <div class="iconhead">
+            <ul class="icon-mb">
+                <li class="icon1 icon">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="icon2 icon">
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="list">
+            <li class="show-mb">
+                <p>Menu</p>
+                <div class="line1"></div>
+            </li>
+            <li><a class="show-mb" href="#">dried samhao for package cushioning</a></li>
+            <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
+            <li><a class="show-mb" href="#">About Us</a></li>
+            <li><a class="show-mb" href="#">Contact Us</a></li>
+            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="product">Shop</a></li>
+            <li><a class="show-dt" href="#">About</a></li>
+            <li><a class="show-dt" href="contact">Contact</a></li>
+            <li><a class="show-dt" href="shipping">
+                    <i class="fa fa-shopping-cart"></i> My Cart
+                </a></li>
+            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                </a></li>
+        </ul>
+
+    </nav>
+    <!-- Java Nav -->
+    <script>
+        const menuBtn = document.querySelector('.checkbtn');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+    </script>
+
+    <section>
+        <div class="top">
+            <div class="shopping-cart">
+                <p>Shopping Cart</p>
+                <div class="line-one"></div>
+            </div>
+            <div class="shipping-detail">
+                <p>Shipping Detail</p>
+                <div class="line-two"></div>
+            </div>
+            <div class="payment-option">
+                <p>Payment Option</p>
+                <div class="line-three"></div>
+            </div>
+        </div>
+
+        <div class="content-left">
+            <div class="title-left">
+                <p>Shopping Cart</p>
+            </div>
+            <div class="detail">
+                <div class="pic">
+                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157145734873129/1kg_cushion.jpg" alt="">
+                </div>
+                <div class="detail-product">
+                    <p class="product">Dried Samhao for package Cushioning (1 kilogram)</p>
+                    <p class="price">50 thb</p>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <form action="#">
+                        <input type="number" name="number" id="piece" min="1" max="20" value="1">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-right">
+            <div class="title-right">
+                <p>Summary</p>
+            </div>
+            <div class="detail-summary">
+                <div class="coupon-code">
+                    <p>enter coupon code</p>
+                </div>
+                <div class="sub-ship">
+                    <div class="subtotal">
+                        <p>subtotal</p>
+                        <p>50 thb</p>
+                    </div>
+                    <div class="shipping">
+                        <p>shipping</p>
+                        <p>free</p>
+                    </div>
+                </div>
+                <div class="total">
+                    <p>total</p>
+                    <p>50 thb</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-cancel">
+            <form action="#">
+                <a href="shipping">
+                    <input type="button" value="Next" id="next">
+                </a>
+                <a href="detail">
+                    <input type="button" value="Cancel" id="cancel">
+                </a>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Java Button -->
+    <script>
+        (function ($) {
+	$.fn.niceNumber = function (options) {
+		var defaults = {
+			autoSize: true,
+			autoSizeBuffer: 1,
+			buttonDecrement: '-',
+			buttonIncrement: '+',
+			buttonPosition: 'around',
+
+			/**
+				callbackFunction
+				@param {$input} currentInput - the input running the callback
+				@param {number} amount - the amount after increase/decrease
+				@param {object} settings - the passed niceNumber settings
+			**/
+			onDecrement: false,
+			onIncrement: false,
+		};
+		var settings = $.extend(defaults, options);
+
+		return this.each(function () {
+			var currentInput = this,
+				$currentInput = $(currentInput),
+				maxValue = $currentInput.attr('max'),
+				minValue = $currentInput.attr('min'),
+				attrMax = null,
+				attrMin = null;
+
+			// Skip already initialized input
+			if ($currentInput.attr('data-nice-number-initialized')) return;
+
+			// Handle max and min values
+			if (
+				maxValue !== undefined &&
+				maxValue !== false
+			) {
+				attrMax = parseFloat(maxValue);
+			}
+
+			if (
+				minValue !== undefined &&
+				minValue !== false
+			) {
+				attrMin = parseFloat(minValue);
+			}
+
+			// Fix issue with initial value being < min
+			if (attrMin && !currentInput.value) {
+				$currentInput.val(attrMin);
+			}
+
+			// Generate container
+			var $inputContainer = $('<div/>', {
+				class: 'nice-number',
+			}).insertAfter(currentInput);
+
+			// Generate interval (object so it is passed by reference)
+			var interval = {};
+
+			// Generate buttons
+			var $minusButton = $('<button/>')
+				.attr('type', 'button')
+				.html(settings.buttonDecrement)
+				.on('mousedown mouseup mouseleave', function (event) {
+					changeInterval(event.type, interval, function () {
+						var currentValue = parseFloat($currentInput.val() || 0);
+						if (
+							attrMin == null ||
+							attrMin < currentValue
+						) {
+							var newValue = currentValue - 1;
+							$currentInput.val(newValue);
+							if (settings.onDecrement) {
+								settings.onDecrement(
+									$currentInput,
+									newValue,
+									settings
+								);
+							}
+						}
+					});
+
+					// Trigger the input event here to avoid event spam
+					if (event.type == 'mouseup' || event.type == 'mouseleave') {
+						$currentInput.trigger('input');
+					}
+				});
+
+			var $plusButton = $('<button/>')
+				.attr('type', 'button')
+				.html(settings.buttonIncrement)
+				.on('mousedown mouseup mouseleave', function (event) {
+					changeInterval(event.type, interval, function () {
+						var currentValue = parseFloat($currentInput.val() || 0);
+						if (
+							attrMax == null ||
+							attrMax > currentValue
+						) {
+							var newValue = currentValue + 1;
+							$currentInput.val(newValue);
+							if (settings.onIncrement) {
+								settings.onIncrement(
+									$currentInput,
+									newValue,
+									settings
+								);
+							}
+						}
+					});
+
+					// Trigger the input event here to avoid event spam
+					if (event.type == 'mouseup' || event.type == 'mouseleave') {
+						$currentInput.trigger('input');
+					}
+				});
+
+			// Remember that we have initialized this input
+			$currentInput.attr('data-nice-number-initialized', true);
+
+			// Append elements
+			switch (settings.buttonPosition) {
+				case 'left':
+					$minusButton.appendTo($inputContainer);
+					$plusButton.appendTo($inputContainer);
+					$currentInput.appendTo($inputContainer);
+					break;
+				case 'right':
+					$currentInput.appendTo($inputContainer);
+					$minusButton.appendTo($inputContainer);
+					$plusButton.appendTo($inputContainer);
+					break;
+				case 'around':
+				default:
+					$minusButton.appendTo($inputContainer);
+					$currentInput.appendTo($inputContainer);
+					$plusButton.appendTo($inputContainer);
+					break;
+			}
+
+			// Nicely size input
+			if (settings.autoSize) {
+				$currentInput.width(
+					$currentInput.val().length + settings.autoSizeBuffer + '5px'
+				);
+				$currentInput.on('keyup input', function () {
+					$currentInput.animate(
+						{
+							width:
+								$currentInput.val().length +
+								settings.autoSizeBuffer +
+								'5px'
+						},
+						200
+					);
+				});
+			}
+		});
+	};
+
+	function changeInterval(eventType, interval, callback) {
+		if (eventType == 'mousedown') {
+			interval.timeout = setTimeout(function () {
+				interval.actualInterval = setInterval(function () {
+					callback();
+				}, 100);
+			}, 200);
+			callback();
+		} else {
+			if (interval.timeout) {
+				clearTimeout(interval.timeout);
+			}
+			if (interval.actualInterval) {
+				clearInterval(interval.actualInterval);
+			}
+		}
+	}
+})(jQuery);
+
+
+    </script>
+
+    <footer>
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png" alt="">
+            </div>
+            <div class="detail-footer">
+                <p>51 soi ramkhamhaeng, wang thong lang district, phlabpla bangkok 10310
+                    <br>email : samhaofiber@gmail.com
+                    <br>tel : 02-232-0000
+                </p>
+            </div>
+            <div class="icon-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-facebook-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-instagram-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://line.me/th/" target="_blank"><i class="fab fa-line"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-line"></i></a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-company">
+            <p>Samhao Company</p>
+        </div>
+
+    </footer>
+        
+</body>
+</html>

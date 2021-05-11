@@ -1,0 +1,988 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap"
+        rel="stylesheet">
+        <!-- <link rel="stylesheet" href="page contact.css"> -->
+    <title>Contact</title>
+
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    justify-items: center;
+}
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 1fr 190px;
+    grid-template-areas: 
+    'nav'
+    'contact'
+    'footer';
+}
+nav{
+    grid-area: nav;
+}
+.container{
+    grid-area: contact;
+}
+footer{
+    grid-area: footer;
+}
+/* ---------- Desktop ---------- */
+.logo img{
+    height: 2.5rem;
+    margin-top: 1.2rem;
+}
+nav{
+  background: #73806C;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  margin-left: 50px;
+}
+.list{
+  float: right;
+  margin-right: 20px;
+}
+.list li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+.list li a{
+  color: white;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: Didact Gothic;
+  font-weight: 400;
+}
+.show-dt:hover{
+  background: white;
+  transition: .5s;
+  border-radius: 20px;
+  color: black;    
+}
+#check{
+ display: none;
+}
+.logo a:hover{
+  background: none;
+}
+.list .show-mb {
+  display: none;
+}
+li p{
+  font-family: 'Judson', serif;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+.line1{
+  margin-top: 2rem;
+  width: 144px;
+  border: 1px white solid;
+}
+.iconhead{
+  display: none;
+}
+
+/* =============navbar============= */
+.container{
+    background: #EFE2D4;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 6fr;
+    grid-template-areas: 
+        'title title'
+        'information right'
+        'left right';
+}
+.contact{
+    grid-area: title;
+}
+.title-left{
+    grid-area: information;
+}
+.content-left{
+    grid-area: left;
+}
+.content-right{
+    grid-area: right;
+}
+.container{
+    padding-top: 50px;
+}
+.contact{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    font-size: 69px;
+    text-align: center;
+    color: #5B3312;
+}
+.contact hr{
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #5B3312;
+}
+.title-left{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.title-left p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: #5B3312;
+}
+.content-left{
+    box-sizing: border-box;
+    width: 400px;
+}
+.information{
+    background-color: #B79E84;
+    border-radius: 4px;
+}
+.information input{
+    background: #EFE2D4;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    border: 1px solid #5B3312;
+    margin: 15px 0px;
+    padding: 8px 20px;
+    border-radius: 3px;
+    width: 300px;
+}
+::placeholder{
+    color: #5B3312;
+}
+.information [name="name"]{
+    margin-top: 10%;
+}
+.form{
+    background: #B79E84;
+    border-radius: 4px;
+}
+#detail{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#submit{
+    background: #5B3312;
+    color: white;
+    height: 40px;
+    padding: 0px 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 150px;
+}
+#submit:hover{
+    cursor: pointer;
+}
+.content-right{
+    margin-top: 50px;
+    box-sizing: border-box;
+    padding: 0px 20% 0px 10%;
+    text-transform: uppercase;
+}
+.content-right div{
+    margin-bottom: 20px;
+}
+.content-right div i{
+    margin-top: 5px;
+    color: #5B3312;;
+}
+.content-right div p{
+    font-family: 'Didact Gothic', sans-serif;
+    width: 400;
+    font-size: 22px;
+    line-height: 30px;
+    color: #5B3312;
+}
+#location{
+    display: flex;
+    width: 100%;
+}
+#location i{
+    font-size: 28px;
+    margin-right: 20px;
+}
+#email{
+    display: flex;
+    width: 100%;
+}
+#email i{
+    font-size: 24px;
+    margin-right: 20px;
+}
+#tel{
+    display: flex;
+    width: 100%;
+}
+#tel i{
+    font-size: 24px;
+    margin-right: 20px;
+}
+#map iframe{
+    width: 100%;
+}
+
+/* ==========footer========== */
+footer{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.footer{
+
+    /* margin-top: 100%; */
+    background: #73806C;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-footer{
+    float: left;
+    margin-left: 5%;
+    /* border: 1px solid sandybrown; */
+}
+.logo-footer img{
+    width: 160px;
+    margin: 2.6rem 0px 0px 0px;
+}
+.detail-footer{
+    display: inline-flex;
+    line-height: 32px;
+    /* border: solid 1px black; */
+    align-items: center;
+    padding-left: 50px;
+}
+.detail-footer p{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+}
+.icon-footer{
+    float: right;
+    /* border: 1px solid blue; */
+    display: flex; 
+}
+.icon-footer ul{
+    display: flex;
+    align-items: flex-end;
+}
+.icon-footer ul li{
+    margin: 0px 1.5rem 1rem 0rem;
+    font-size: 40px;
+    align-content: center;
+    justify-content: center;
+}
+.icon-footer ul li a{
+    color: white;
+}
+.icon-footer ul li a:hover, a:active{
+    cursor: pointer;
+    color: black;
+    transition: .5s;
+}
+.footer-company{
+    display: flex;
+    background: white;
+    /* border: solid 1px red; */
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-company p{
+    font-family: 'Judson', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #A8AD9F;
+}
+
+@media (max-width: 952px){
+    /* ==========navbar========== */
+    .logo img{
+        margin-left: 0;
+        height: 2rem;
+        margin-top: 1.5rem;
+    }
+    .list li a{
+        font-size: 16px;
+    }
+    /* ==========contact========== */
+    .contact{
+        font-size: 65px;
+    }
+    .title-left{
+        margin: 35px 0px 10px 50px;
+    }
+    .title-left p{
+        font-size: 33px;
+    }
+    .content-left{
+        padding: 0px 10px;
+        margin-left: 50px;
+    }
+    .content-right div p{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .information input{
+        margin: 10px 0px;
+        padding: 7px 15px;
+        font-size: 22px;
+        width: 280px;
+    }
+    .content-right{
+        margin-top: 40px;
+        padding: 0px 15% 0px 10%;
+    }
+    #location i{
+        font-size: 26px;
+    }
+    #email i{
+        font-size: 22px;
+    }
+    #tel i{
+        font-size: 22px;
+    }
+    #map iframe{
+        padding: 0px 5%;
+        width: 100%;
+        height: 280px;
+    }
+    #submit{
+        height: 35px;
+        width: 130px;
+    }
+    /* ==========footer========== */
+    .logo-footer{
+        margin-left: 4%;
+    }
+    .logo-footer img{
+        width: 120px;
+        margin: 3rem 0px 0px 0px;
+    }
+    .detail-footer{
+        box-sizing: border-box;
+        padding: 0px 0px 0px 4%;
+    }
+    .detail-footer p{
+        font-size: 16px;
+        padding-right: 0px;
+    }
+    .icon-footer ul li{
+        margin: 0px 1rem 1rem 0rem;
+        font-size: 32px;
+    }
+    .footer-company p{
+        font-size: 22px;
+    }
+}
+
+/* ---------- iPhone6/7/8 - iPhoneX - iPhone6/7/8 Plus ---------- */
+@media (max-width: 858px){
+    /* ==========Grid========== */
+    body{
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 70px 1fr 145px;
+        grid-template-areas: 
+        'nav'
+        'contact-mb'
+        'footer';
+    }
+    nav{
+        position: fixed;
+        grid-area: nav;
+    }
+    .container{
+        padding-top: 20px;
+        grid-area: contact-mb;
+    }
+    footer{
+        grid-area: footer;
+    }
+    /* ==========navbar========== */
+    nav{
+        background: #73806C;
+        height: 70px;
+        width: 100%;
+    }
+    .logo img{
+        margin-top: 1.2rem;
+        padding: 0px;
+        height: 1.7rem;
+    }
+    .logo a{
+        float: right;
+    }
+    .list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #73806C;
+        top: 0px; 
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    .list li p{
+        margin-top: 50px;
+    }
+    .list li{
+        display: block;
+        margin: 40px 10px 0px 10px;
+        line-height: 30px;
+    }
+    .list li a{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .logo a:active{
+        background: none;
+    }
+    .list li a:hover,a:active{
+        background: none;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .icon-mb li a{
+        color: white;
+    }
+    .icon-mb li a:active{
+        color: black;
+    }
+    .iconhead{
+        display: flex;
+        margin: -45px 0px 0px 0px;
+        float: right;
+    }
+    .icon-mb{
+        display: flex;
+    }
+    .icon a i{
+        font-size: 20px;
+    }
+    .icon{
+        margin-right: 15px;
+    }
+    .show-dt{
+        display: none;
+    }
+    .list .show-mb{
+        display: inline-block;
+    }
+    label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        margin-left: 41%;
+        /* border: 1px solid black; */
+        display: inline-block;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: -85px 0px 0px 0px;
+    }
+    li p{
+        font-size: 28px;
+    }
+    .checkbtn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+    }
+    .line {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .line::before {
+        transform: translateY(-8px);
+    }
+    .line::after {
+        transform: translateY(8px);
+    }
+    .checkbtn.open .line {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+        z-index: 1;
+    }
+    .checkbtn.open .line::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .checkbtn.open .line::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    /* ==========contact========== */
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.1fr 1fr 0.1fr 0.8fr;
+        grid-template-areas: 
+        'contact'
+        'right'
+        'title-left'
+        'left';
+    }
+    .contact{
+        grid-area: contact;
+    }
+    .title-left{
+        grid-area: title-left;
+    }
+    .content-left{
+        grid-area: left;
+    }
+    .content-right{
+        grid-area: right;
+    }
+    .title-left{
+        margin-left: 0px;
+        margin-top: 35px;
+        margin-bottom: 10px;
+        padding: 0px;
+    }
+    .title-left p{
+        font-size: 20px;
+    }
+    .form{
+        /* background: #B79E84; */
+        border-radius: 4px;
+    }
+    .content-left{
+        width: 100%;
+        padding: 0px 60px;
+        margin: 0px;
+    }
+    .contact{
+        font-size: 30px;
+    }
+    .content-right{
+        padding: 0px 35px;
+        margin: 40px 0px 0px 0px;
+    }
+    .content-right div p{
+        font-size: 17px;
+        line-height: 26px;
+    }
+    .information{
+        width: 100%;
+    }
+    .information input{
+        margin: 10px 0px;
+        padding: 4px 10px;
+        font-size: 17px;
+        width: 200px;
+        background: #EFE2D4;
+    }
+    #location i{
+        font-size: 24px;
+    }
+    #email i{
+        font-size: 20px;
+    }
+    #tel i{
+        font-size: 20px;
+    }
+    #submit{
+        height: 30px;
+        width: 100px;
+    }
+    #map iframe{
+        padding: 0px 5%;
+        width: 100%;
+        height: 250px;
+    }
+
+    /* ==========footer========== */
+    footer{
+        width: 100%;
+    }
+    .footer{
+        height: 120px;
+        display: inline-block;
+    }
+    .logo-footer{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .logo-footer img{
+        width: 60px;
+        margin: 0px;
+    }
+    .detail-footer{
+        margin: 55px 20px 0px 20px ;
+        line-height: 12px;
+        display: block;
+        padding: 0px;
+    }
+    .detail-footer p{
+        font-size: 9px;
+    }
+    .icon-footer{
+        margin-top: -20px;
+        margin-right: 0.5rem;
+    }
+    .icon-footer ul li{
+        margin: 0px 0.5rem 0.5rem 0rem;
+        font-size: 20px;
+    }
+    .footer-company{
+        height: 25px;
+    }
+    .footer-company p{
+        font-size: 13px;
+    }
+
+ /* ----------  iPhone5/SE ---------- */
+@media (max-width: 350px){
+/* ==========Grid========== */
+    body{
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 1fr 120px;
+        grid-template-areas: 
+        'nav'
+        'contact-mb'
+        'footer';
+    }
+/* ==========navbar========== */
+    nav{
+        height: 50px;
+    }
+    .logo img{
+        height: 1.6rem;
+    }
+    .iconhead{
+        margin: -35px 0px 0px 0px;
+    }
+    .icon a i{
+        font-size: 16px;
+    }
+    .icon{
+        margin-right: 13px;
+    }
+    label.logo{
+        margin-left: 40%;
+        margin-top: -100px;
+    }
+    label.logo a{
+        margin: 35px 0px 0px 0px;
+    }
+    .list li a{
+        font-size: 16px;
+        padding: 0px 13px;
+    }
+    .checkbtn {
+        width: 50px;
+        height: 50px;
+    }
+    .line {
+        width: 20px;
+        height: 2px;
+    }
+    .line::before,
+    .line::after {
+        width: 20px;
+        height: 2px;
+    }
+    .line::before {
+        transform: translateY(-6px);
+    }
+    .line::after {
+        transform: translateY(6px);
+    }
+/* ==========contact========== */
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.1fr 0.7fr;
+        grid-template-areas: 
+        'contact'
+        'right'
+        'title-left'
+        'left';
+    }
+    .title-left{
+        margin-top: 20px;
+    }
+    .title-left p{
+        font-size: 18px;
+    }
+    .content-left{
+        padding: 0px 50px;
+    }
+    .contact{
+        font-size: 28px;
+    }
+    .content-right{
+        padding: 0px 30px;
+        margin: 30px 0px 0px 0px;
+    }
+    .content-right div p{
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .information input{
+        padding: 3px 10px;
+        font-size: 15px;
+        width: 180px;
+    }
+    #location i{
+        font-size: 22px;
+    }
+    #email i{
+        font-size: 18px;
+    }
+    #tel i{
+        font-size: 18px;
+    }
+    #submit{
+        height: 25px;
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    #map iframe{
+        padding: 0px 3%;
+        width: 100%;
+        height: 250px;
+    }
+/* ==========footer========== */
+    .footer{
+        height: 100px;
+    }
+    .logo-footer{
+        margin: 15px 0px 0px 15px;
+    }
+    .logo-footer img{
+        width: 40px;
+    }
+    .detail-footer{
+        margin: 40px 15px 0px 15px ;
+        line-height: 10px;
+    }
+    .detail-footer p{
+        font-size: 8px;
+    }
+    .icon-footer{
+        margin-top: -10px;
+    }
+    .icon-footer ul li{
+        font-size: 16px;
+    }
+    .footer-company{
+        height: 20px;
+    }
+    .footer-company p{
+        font-size: 12px;
+    }
+}
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <div class="line-1 line"></div>
+        </label>
+        <label class="logo"><a href="#"><img
+                    src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png"
+                    alt=""></a></label>
+        <div class="iconhead">
+            <ul class="icon-mb">
+                <li class="icon1 icon">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="icon2 icon">
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="list">
+            <li class="show-mb">
+                <p>Menu</p>
+                <div class="line1"></div>
+            </li>
+            <li><a class="show-mb" href="#">dried samhao for package cushioning</a></li>
+            <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
+            <li><a class="show-mb" href="#">About Us</a></li>
+            <li><a class="show-mb" href="#">Contact Us</a></li>
+            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="product">Shop</a></li>
+            <li><a class="show-dt" href="#">About</a></li>
+            <li><a class="show-dt" href="contact">Contact</a></li>
+            <li><a class="show-dt" href="shipping">
+                    <i class="fa fa-shopping-cart"></i> My Cart
+                </a></li>
+            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                </a></li>
+        </ul>
+
+    </nav>
+
+    <script>
+        const menuBtn = document.querySelector('.checkbtn');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+    </script>
+
+    <div class="container">
+
+        <div class="contact">
+            <p>Contact Us</p>
+            <hr>
+        </div>
+
+        <div class="title-left">
+            <p>Asking For Infomation</p>
+        </div>
+
+        <div class="content-left">
+            <form class="form" action="" align = center>
+                <div class="information">
+                    <label for="name"></label>
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="information"> 
+                    <label for="phone"></label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="information">
+                    <label for="email"></label>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="information">
+                    <label for="topic"></label>
+                    <input type="text" name="topic" placeholder="Topic" required>
+                </div>
+                <div class="information">
+                    <label for="detail"></label>
+                    <input type="text" id="detail" name="detail" placeholder="Detail">
+                </div>
+                <div class="information">
+                    <label for="submit"></label>
+                    <input type="submit" id="submit" name="send" value="Send">
+                </div>    
+            </form>
+        </div>
+        
+        <div class="content-right">
+            <div id="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>51 soi ramkhamhaeng, wang thong lang district, phlabpla bangkok 10310</p>
+            </div>
+            <div id="email">
+                <i class="fas fa-envelope"></i>
+                <p>email : samhaofiber@gmail.com</p>
+            </div>
+            <div id="tel">
+                <i class="fas fa-phone-alt"></i>
+                <p>tel : 02-232-0000</p>
+            </div>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3875.413554630006!2d100.6015419!3d13.7539164!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29e3df73f4d95%3A0x5bc5867c669ef572!2zNTEg4LiL4Lit4LiiIOC4o-C4suC4oeC4hOC4s-C5geC4q-C4hyA5IOC5geC4guC4p-C4hyDguJ7guKXguLHguJrguJ7guKXguLIg4LmA4LiC4LiV4Lin4Lix4LiH4LiX4Lit4LiH4Lir4Lil4Liy4LiHIOC4geC4o-C4uOC4h-C5gOC4l-C4nuC4oeC4q-C4suC4meC4hOC4oyAxMDMxMg!5e0!3m2!1sth!2sth!4v1618651224540!5m2!1sth!2sth" 
+                width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="https://cdn.discordapp.com/attachments/821748947684294709/831127445762867210/samhaologo.png" alt="">
+            </div>
+            <div class="detail-footer">
+                <p>51 soi ramkhamhaeng, wang thong lang district, phlabpla bangkok 10310
+                    <br>email : samhaofiber@gmail.com
+                    <br>tel : 02-232-0000
+                </p>
+            </div>
+            <div class="icon-footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-facebook-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-instagram-square"></i></a> -->
+                    </li>
+                    <li>
+                        <a href="https://line.me/th/" target="_blank"><i class="fab fa-line"></i></a>
+                        <!-- <a href="#" ><i class="fab fa-line"></i></a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-company">
+            <p>Samhao Company</p>
+        </div>
+
+    </footer>
+</body>
+</html>
