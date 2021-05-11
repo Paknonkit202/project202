@@ -848,7 +848,7 @@ button i{
             <li><a class="show-mb" href="#">Contact Us</a></li>
             <li><a class="show-dt" href="homepage">Home</a></li>
             <li><a class="show-dt" href="product">Shop</a></li>
-            <li><a class="show-dt" href="#">About</a></li>
+            <li><a class="show-dt" href="#1">About</a></li>
             <li><a class="show-dt" href="contact">Contact</a></li>
             <li><a class="show-dt" href="shipping">
                     <i class="fa fa-shopping-cart"></i> My Cart
@@ -876,12 +876,13 @@ button i{
         <div class="form">
 
             <div class="sign-in">
-                <form action="homepage" class="sign-in-form">
+                <form action="" class="sign-in-form" method="POST">
+                    {% csrf_token %}
                     <div class="title">
                         <p>Sign In</p>
                     </div>
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Password">
+                    <input type="text" placeholder="E-mail" name="username" required>
+                    <input type="password" placeholder="Password" name="password-login" required>
                     <button type="submit">Sign In</button>
                     <div class="line-or"></div>
                     <p class="or">Or</p>
@@ -895,18 +896,18 @@ button i{
                         <!-- <button><i class="fab fa-google"></i>Sign in with Google</button>
                         <button><i class="fab fa-facebook-f"></i>Sign in with Facebook</button> -->
                     </div>
-                    <p class="message">Doesn't have an account yet? <a href="register"></a></p>
+                    <p class="message">Doesn't have an account yet? <a href="#">register</a></p>
                 </form>
             </div>
 
             <div class="register">
-                <form action="#" class="register-form">
+                <form action="#" class="register-form" method="POST">
                     <div class="title">
                         <p>Register</p>
                     </div>
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm Password">
+                    <input type="email" placeholder="E-mail" name="email">
+                    <input type="password" placeholder="Password" name="password">
+                    <input type="password" placeholder="Confirm Password" name="conpassword">
                     <button type="submit">Register</button>
                     <p class="message">Already have account? <a href="#">Sign In</a></p>
                 </form>
