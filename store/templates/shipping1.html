@@ -6,45 +6,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="page_shopping_cart.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Judson:wght@400;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script type="text/javascript"> 
-        $(function(){
-            $('input[type="number"]').niceNumber();
-        });
-    </script>
-    
-    <title>Shopping Cart</title>
+    <!-- <link rel="stylesheet" href="shipping_detail_page.css"> -->
+
+    <title>Shipping Detail</title>
 
 <style>
-    *{
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    /* justify-items: center; */
 }
 body{
-    min-height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 80px 0.1fr 190px;
+    grid-template-rows: 80px 1fr 190px;
     grid-template-areas: 
     'nav'
-    'shopping'
+    'section'
     'footer';
 }
 nav{
-    position: fixed;
-    z-index: 1;
     grid-area: nav;
 }
 section{
-    grid-area: shopping;
+    grid-area: section;
 }
 footer{
     grid-area: footer;
@@ -61,6 +53,7 @@ nav{
   background: #73806C;
   height: 80px;
   width: 100%;
+  position: fixed;
 }
 label.logo{
   color: white;
@@ -115,7 +108,7 @@ li p{
   display: none;
 }
 
-/* ==========Grid Shopping========== */
+/* =============Grid Section============= */
 section{
     background: #EFE2D4;
     display: grid;
@@ -139,7 +132,7 @@ section{
     grid-area: button;
 }
 
-/* ==========Shopping========== */
+/* ==========Shipping========== */
 .top{
     display: flex;
     background: #B79E84;
@@ -156,18 +149,18 @@ section{
     font-size: 30px;
     font-weight: 400;
 }
-.shopping-cart{
+.shipping-detail{
     border-bottom: 1px solid #5B3312;
 }
-.shopping-cart p{
+.shipping-detail p{
     color:#5B3312;
     margin: 20px 0px ;
 }
-.shipping-detail,
+.shopping-cart,
 .payment-option{
     border-bottom: 1px solid white;
 }
-.shipping-detail p,
+.shopping-cart p,
 .payment-option p{
     color: white;
     margin: 20px 0px;
@@ -185,99 +178,121 @@ section{
     color: #5B3312;
 }
 
-/* ==========Grid Content Left========== */
-.detail{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.6fr 0.4fr;
-    grid-template-areas: 
-    'pic detail'
-    'pic price';
+/* ==========Grid "Detail" Content Left========== */
+.information{
+    border-bottom: 1px solid #5B3312;
+    background: none;
+    padding: 40px 0;
 }
-.pic{
-    grid-area: pic;
+.input_wrap{
+    margin-bottom: 3%;
 }
-.detail-product{
-    grid-area: detail;
-}
-.quantity{
-    grid-area: price;
-}
-
-.detail{
-    box-sizing: border-box;
-    margin-top: 3%;
-}
-.pic{
-    margin-right: 25px;
-}
-.pic img{
-    height: auto;
+.input_wrap,
+.wrap{
     width: 100%;
 }
-.detail-product{
+.input_wrap input[type="text"],
+.wrap input[type="text"],
+.wrap input[type="tel"]{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 25px;
+    background: #EFE2D4;
+    border: 1px solid #5B3312;
+    outline: none;
+    height: 45px;
+    padding-left: 20px;
+    width: 100%;
+}
+.input_wrap input[type="text"]::placeholder,
+.wrap input[type="text"]::placeholder,
+.wrap input[type="tel"]::placeholder{
     color: #5B3312;
 }
-.product{
-    font-family: 'Judson', serif;
-    font-weight: 400;
-    font-size: 22px;
+.country-city{
+    display: flex;
+    justify-content: space-between;
 }
-.price{
-    font-family: 'Judson', serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 40px;
+.zip-phone{
+    display: flex;
+    justify-content: space-between;
+}
+.choice{
+    border-bottom: 1px solid #5B3312;
+}
+.shipping ul{
+    display: flex;
+    justify-content: space-between;
+    background: #EFE2D4;
+} 
+.information .input_name{
+    display: flex;
+    justify-content: space-between;
+}
+.fname, .country, .zip{
+    margin-right: 30px;
 }
 
-/* ==========ปุ่ม========== */
-.quantity{
-    display: block;
+/* =====Radio===== */
+.radio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.choice-regis{
+    display: flex;
+    margin-right: 3%;
+    width: 100%;
+}
+.choice-flash{
+    display: flex;
+    width: 100%;
+}
+input[type="radio"]{
+    display: none;
+}
+label[for="registered"],
+label[for="the-flash"]{
     position: relative;
-}
-.quantity p{
-    font-size: 22px;
-    color: #5B3312
-}
-.quantity form input{
-    border: 1px solid #5B3312;
-    outline: none;
-    padding: 10px;
-    background: #EFE2D4;
+    display: flex;
     color: #5B3312;
-    width: 80%;
-    text-align: center;
-    vertical-align: middle;
-    -moz-appearance: textfield;
-    box-sizing: content-box;
-    margin: 0;
-    font-size: 16px;
-    font-family: 'Judson', serif;
-}
-.quantity form input::-webkit-inner-spin-button,
-.quantity form input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.nice-number{
-    display: inline-flex;
-    justify-content: stretch;
-    margin-top: 3%;
-}
-.nice-number button{
-    color: #5B3312;
-    background: #B79E84;
-    width: 40px;
-    border: 1px solid #5B3312;
-    font-size: 20px;
-    outline: none;
-    text-align: center;
-}
-.nice-number button:hover{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 27px;
+    align-items: center;
     cursor: pointer;
 }
+.regis:before,
+.the-flash:before{
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    border: 2px solid #5B3312;
+    border-radius: 50%;
+    /* margin-right: 50%; */
+    margin-left: -15%;
+    margin-top: 25px;
+}
+input[type="radio"]:checked + .new,
+input[type="radio"]:checked + .test{
+    background: #B79E84;
+}
+input[type="radio"]:checked + div label::before{
+    background: #5B3312;
+}
+.new, .test{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #5B3312;
+    margin: 40px 0px;
+    padding: 3% 1% 4% 17%;
+    /* padding: 15px 40px 5px 100px; */
+}
+.new .detail-regis,
+.test .detail-the-flash{
+    font-size: 16px;
+}
 
-/* ==========Content Reight========== */
+/* ==========Content Right========== */
 .title-right{
     padding-bottom: 20px;
     border-bottom: 1px solid #5B3312;
@@ -290,6 +305,69 @@ section{
 .content-right{
     margin: 40px 10% 0 5% ;
 }
+
+/* Grid Product */
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-areas: 
+    'piece piece'
+    'pic detail-product';
+}
+.piece{
+    grid-area: piece;
+}
+.pic{
+    grid-area: pic;
+}
+.detail-product{
+    grid-area: detail-product;
+}
+
+/* Grid Detail Product */
+.detail-product{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 0.3fr;
+    grid-template-areas: 
+    'detail'
+    'price';
+}
+.detail{
+    grid-area: detail;
+}
+.price{
+    grid-area: price;
+}
+
+.pic{
+    margin-right: 20px;
+}
+.pic img{
+    width: 100%;
+    height: auto;
+}
+.product{
+    border-bottom: 1px solid #5B3312;
+    padding: 5% 0;
+}
+
+
+.piece p{
+    font-family: 'Didact Gothic', sans-serif;
+}
+.piece p, .detail p{
+    color: #5B3312;
+    font-size: 20px;
+}
+.price p{
+    color: #5B3312;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+}
+
 .coupon-code{
     border-bottom: 1px solid #5B3312;
 }
@@ -429,7 +507,31 @@ footer{
         font-size: 16px;
     }
 
-    /* ==========Shopping========== */
+    /* ==========Footer========== */
+    .logo-footer{
+        margin-left: 4%;
+    }
+    .logo-footer img{
+        width: 120px;
+        margin: 3rem 0px 0px 0px;
+    }
+    .detail-footer{
+        box-sizing: border-box;
+        padding: 0px 0px 0px 4%;
+    }
+    .detail-footer p{
+        font-size: 16px;
+        padding-right: 0px;
+    }
+    .icon-footer ul li{
+        margin: 0px 1rem 1rem 0rem;
+        font-size: 32px;
+    }
+    .footer-company p{
+        font-size: 22px;
+    }
+
+    /* ==========Shipping========== */
     .top{
         height: 110px;
     }
@@ -447,32 +549,43 @@ footer{
     .title-left p{
         font-size: 44px;
     }
-    .detail{
-        margin-top: 3%;
-    }
-    .pic{
-        margin-right: 15px;
-    }
-    .product{
-        font-size: 20px;
-    }
-    .price{
-        font-size: 38px;
-    }
+
     
-    /* ==========ปุ่ม========== */
-    .quantity p{
-        font-size: 20px;
+    /* ==========Grid "Detail" Content Left========== */
+    .information{
+        padding: 20px 0;
     }
-    .quantity form input{
-        padding: 7px;
-        font-size: 14px;
+    .input_wrap input[type="text"],
+    .wrap input[type="text"],
+    .wrap input[type="tel"]{
+        font-size: 23px;
+        height: 40px;
     }
-    .nice-number button{
-        width: 35px;
-        font-size: 18px;
+    .fname, .country, .zip{
+        margin-right: 25px;
     }
-    
+
+    /* =====Radio===== */
+    .choice-regis{
+        margin-right: 25px;
+    }
+    label[for="registered"],
+    label[for="the-flash"]{
+        font-size: 25px;
+    }
+    .regis:before,
+    .the-flash:before{
+        height: 18px;
+        width: 18px;
+    }
+    .new, .test{
+        margin: 20px 0px;
+    }
+    .new .detail-regis,
+    .test .detail-the-flash{
+        font-size: 16px;
+    }
+
     /* ==========Content Reight========== */
     .title-right{
         padding-bottom: 20px;
@@ -498,6 +611,8 @@ footer{
     .total p{
         font-size: 38px;
     }
+
+    /* ปุ่ม next & cancel */
     .next-cancel{
         margin: 2% 0 0 5%;
     }
@@ -508,29 +623,42 @@ footer{
         font-size: 18px;
     }
 
-    /* ==========Footer========== */
-    .logo-footer{
-        margin-left: 4%;
+    /* Grid Product */
+    .product{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0. 7fr 0.2fr;
+        grid-template-areas: 
+        'piece'
+        'pic'
+        'detail-product';
     }
-    .logo-footer img{
-        width: 120px;
-        margin: 3rem 0px 0px 0px;
+    .piece{
+        grid-area: piece;
     }
-    .detail-footer{
-        box-sizing: border-box;
-        padding: 0px 0px 0px 4%;
+    .pic{
+        grid-area: pic;
     }
-    .detail-footer p{
-        font-size: 16px;
-        padding-right: 0px;
+    .detail-product{
+        grid-area: detail-product;
     }
-    .icon-footer ul li{
-        margin: 0px 1rem 1rem 0rem;
-        font-size: 32px;
+
+    /* Detail Product */
+
+    .pic{
+        margin-right: 0px;
     }
-    .footer-company p{
-        font-size: 22px;
+    .product{
+        padding: 5% 0;
     }
+
+    .piece p, .detail p{
+        font-size: 18px;
+    }
+    .price p{
+        font-size: 38px;
+    }
+
 
 /* ---------- iPhone6/7/8 - iPhoneX - iPhone6/7/8 Plus ---------- */
 @media (max-width: 858px){
@@ -541,14 +669,14 @@ footer{
         grid-template-rows: 70px 1fr 145px;
         grid-template-areas: 
         'nav'
-        'shopping'
+        'shipping'
         'footer';
     }
     nav{
         grid-area: nav;
     }
     section{
-        grid-area: shopping;
+        grid-area: shipping;
     }
     footer{
         grid-area: footer;
@@ -689,158 +817,6 @@ footer{
         transform: rotate(-45deg) translate(35px, 35px);
     }
 
-    
-    /* ==========Grid Shopping========== */
-    section{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 75px 0.5fr 0.5fr 0.1fr;
-        grid-template-areas: 
-        'top'
-        'left'
-        'right'
-        'button';       
-    }
-    .top{
-        grid-area: top;
-    }
-    .content-left{
-        grid-area: left;
-    }
-    .content-right{
-        grid-area: right;
-    }
-    .next-cancel{
-        grid-area: button;
-    }
-
-    /* ==========Shopping========== */
-    /* Top */
-    .top{
-        width: 100%;
-        height: 75px;
-    }
-    .top div{
-        padding: 0px 2%;
-    }
-    .top div p{
-        font-size: 16px;
-    }
-    .shopping-cart p{
-        margin: 10px 0px ;
-    }
-    .shipping-detail p,
-    .payment-option p{
-        margin: 10px 0px;
-    }
-
-    /* ==========Grid Content Left========== */
-    .detail{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        'pic product'
-        'quantity quantity';
-    }
-    .pic{
-        grid-area: pic;
-    }
-    .detail-product{
-        grid-area: product;
-    }
-    .quantity{
-        grid-area: quantity;
-    }
-    .content-left{
-        margin: 20px 7% 0 7%;
-    }
-    .title-left{
-        padding-bottom: 10px;
-    }
-    .title-left p{
-        text-align: center;
-        font-weight: 700;
-        font-size: 30px;
-    }
-    .detail{
-        margin-top: 5%;
-    }
-    .pic{
-        margin-right: 20px;
-    }
-    .product{
-        font-size: 17px;
-    }
-    .price{
-        font-size: 30px;
-    }
-
-    /* ==========ปุ่ม========== */
-    .quantity{
-        text-align: center;
-        margin-top: 5%;
-    }
-    .quantity p{
-        font-size: 17px;
-    }   
-    .quantity form input{
-        font-size: 14px;
-    }
-    .nice-number{
-        margin-top: 3%;
-    }
-    .nice-number button{
-        width: 30px;
-        font-size: 16px;
-    }
-
-    /* ==========Content Reight========== */
-    .title-right{
-        display: none;
-    }
-    .content-right{
-        margin: 0 7% 0 7% ;
-    }
-    .coupon-code{
-        border-top: 1px solid #5B3312;
-        border-bottom: 1px solid #5B3312;
-    }
-    .coupon-code p, .subtotal p, .shipping p{
-        font-size: 15px;
-    }
-    .coupon-code p{
-        margin: 3% 0;
-    }   
-    .sub-ship{
-        padding: 3% 0;
-    }
-    .total{
-        padding: 3% 0;
-        border-bottom: 1px solid #5B3312;
-    }
-    .total p{
-        font-size: 30px;
-    }
-    
-    .next-cancel{
-        margin: 10% 0 15% 0;
-        text-align: center;
-    }
-    #next{
-        font-size: 16px;
-        padding: 2% 0;
-        width: 25%;
-    }
-    #cancel{
-        font-size: 16px;
-        width: 25%;
-        padding: 2% 0;
-    } 
-    #piece{
-        padding: 6px;
-    }  
-    
     /* ==========footer========== */
     footer{
         width: 100%;
@@ -881,76 +857,17 @@ footer{
         font-size: 13px;
     }
 
-/* ----------  iPhone5/SE ---------- */
-@media (max-width: 350px){
-    /* ==========Grid========== */
-    body{
-        width: 100%;
-        grid-template-columns: 100%;
-        grid-template-rows: 50px 1fr 120px;
-        grid-template-areas: 
-        'nav'
-        'shopping'
-        'footer';
-    }
+/* ==========Shipping========== */
 
-    /* ==========navbar========== */
-    nav{
-        height: 50px;
-    }
-    .logo img{
-        height: 1.6rem;
-    }
-    .iconhead{
-        margin: -35px 0px 0px 0px;
-    }
-    .icon a i{
-        font-size: 16px;
-    }
-    .icon{
-        margin-right: 13px;
-    }
-    label.logo{
-        margin-left: 40%;
-        margin-top: -100px;
-    }
-    label.logo a{
-        margin: 35px 0px 0px 0px;
-    }
-    .list li a{
-        font-size: 16px;
-        padding: 0px 13px;        
-    }
-    .checkbtn {
-        width: 50px;
-        height: 50px;
-    }
-    .line {
-        width: 20px;
-        height: 2px;
-    }
-    .line::before,
-    .line::after {
-        width: 20px;
-        height: 2px;
-    }
-    .line::before {
-        transform: translateY(-6px);
-    }
-    .line::after {
-        transform: translateY(6px);
-    }
-
-    /* ==========Grid Shopping========== */
+    /* ==========Grid Shipping========== */
     section{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 75px 0.5fr 0.5fr 0.1fr;
+        grid-template-rows: 75px 0.5fr 0.1fr;
         grid-template-areas: 
         'top'
         'left'
-        'right'
-        'button';       
+        'button';
     }
     .top{
         grid-area: top;
@@ -958,122 +875,348 @@ footer{
     .content-left{
         grid-area: left;
     }
-    .content-right{
-        grid-area: right;
-    }
     .next-cancel{
         grid-area: button;
     }
 
-    /* ==========Shopping========== */
     /* Top */
     .top{
         width: 100%;
-        height: 65px;
+        height: 75px;
     }
     .top div{
         padding: 0px 2%;
     }
     .top div p{
-        font-size: 14px;
+        font-size: 16px;
     }
     .shopping-cart p{
-        margin: 7px 0px ;
+        margin: 10px 0px ;
     }
     .shipping-detail p,
     .payment-option p{
-        margin: 7px 0px;
+        margin: 10px 0px;
     }
-    /* Content Left */
+
+    /* ==========Grid Content Left========== */
+    .detail{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.4fr;
+        grid-template-areas: 
+        'information'
+        'choice';
+    }
+    .information{
+        grid-area: information;
+    }
+    .choice{
+        grid-area: choice;
+    }
+
     .content-left{
-        margin: 10px 7% 0 7%;
+        margin: 20px 7% 0 7%;
     }
     .title-left{
         padding-bottom: 10px;
     }
     .title-left p{
-        font-size: 28px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
     }
     .detail{
-        margin-top: 5%;
-    }
-    .pic{
-        margin-right: 20px;
-    }
-    .product{
-        font-size: 15px;
-    }
-    .price{
-        font-size: 28px;
+        margin-top: 0;
     }
 
-    /* ==========ปุ่ม========== */
-    .quantity p{
-        font-size: 15px;
-    }   
-    .quantity form input{
-        font-size: 13px;
+    /* Detail Content Left */
+    .information .input_name,
+    .information .country-city,
+    .information .zip-phone{
+        display: block;
     }
-    .nice-number button{
-        width: 25px;
-        font-size: 15px;
+    .choice .radio{
+        display: block;
     }
-    #piece{
-        padding: 5px;
+    .choice{
+        border-bottom: none;
+        margin-top: 0px;
     }
 
-    /* ==========Content Reight========== */
-    .content-right{
-        margin: 0 7% 0 7% ;
+    /* Information */
+    .information{
+        padding: 40px 0;
     }
-    .coupon-code p, .subtotal p, .shipping p{
-        font-size: 13px;
-    }
-    .total p{
-        font-size: 28px;
-    }
-    #next{
-        font-size: 15px;
-    }
-    #cancel{
-        font-size: 15px;
-    }   
-
-    /* ==========footer========== */
-    .footer{
-        height: 100px;
-    }
-    .logo-footer{
-        margin: 15px 0px 0px 15px;
-    }
-    .logo-footer img{
-        width: 40px;
-    }
-    .detail-footer{
-        margin: 40px 15px 0px 15px ;
-        line-height: 10px;
-    }
-    .detail-footer p{
-        font-size: 8px;
-    }
-    .icon-footer{
-        margin-top: -10px;
-    }
-    .icon-footer ul li{
+    .input_wrap input[type="text"],
+    .wrap input[type="text"],
+    .wrap input[type="tel"]{
         font-size: 16px;
     }
-    .footer-company{
-        height: 20px;
+    .input_wrap{
+        margin-bottom: 7%;
     }
-    .footer-company p{
-        font-size: 12px;
+    .zip-phone .zip{
+        margin-bottom: 7%;
     }
-}
-}}
 
+    /* Choice */
+    .new .regis,
+    .test .the-flash{
+        font-size: 20px;
+    }
+    label.detail-regis,
+    label.detail-the-flash{
+        font-size: 13px;
+    }
+    .new .detail-regis,
+    .test .detail-the-flash{
+        font-size: 13px;
+    }
+    .new{
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+    .test{
+        margin: 0;
+    }
+    .regis:before,
+    .the-flash:before{
+        height: 15px;
+        width: 15px;
+    }
+
+    /* ปุ่ม Next & Cancel */
+    .next-cancel{
+        margin: 10% 0 15% 0;
+        text-align: center;
+    }
+    #next{
+        font-size: 16px;
+        padding: 2% 0;
+        width: 25%;
+    }
+    #cancel{
+        font-size: 16px;
+        width: 25%;
+        padding: 2% 0;
+    } 
+    #piece{
+        padding: 6px;
+    } 
+
+    /* Content Right */
+    .content-right{
+        display: none;
+    }
+
+/* ----------  iPhone5/SE ---------- */
+@media (max-width: 350px){
+/* ==========Grid========== */
+body{
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 1fr 120px;
+    grid-template-areas: 
+    'nav'
+    'shipping'
+    'footer';
+}
+/* ==========navbar========== */
+nav{
+    height: 50px;
+}
+.logo img{
+    height: 1.6rem;
+}
+.iconhead{
+    margin: -35px 0px 0px 0px;
+}
+.icon a i{
+    font-size: 16px;
+}
+.icon{
+    margin-right: 13px;
+}
+label.logo{
+    margin-left: 40%;
+    margin-top: -100px;
+}
+label.logo a{
+    margin: 35px 0px 0px 0px;
+}
+.list li a{
+    font-size: 16px;
+    padding: 0px 13px;        
+}
+.checkbtn {
+    width: 50px;
+    height: 50px;
+}
+.line {
+    width: 20px;
+    height: 2px;
+}
+.line::before,
+.line::after {
+    width: 20px;
+    height: 2px;
+}
+.line::before {
+    transform: translateY(-6px);
+}
+.line::after {
+    transform: translateY(6px);
+}
+
+/* ==========footer========== */
+.footer{
+    height: 100px;
+}
+.logo-footer{
+    margin: 15px 0px 0px 15px;
+}
+.logo-footer img{
+    width: 40px;
+}
+.detail-footer{
+    margin: 40px 15px 0px 15px ;
+    line-height: 10px;
+}
+.detail-footer p{
+    font-size: 8px;
+}
+.icon-footer{
+    margin-top: -10px;
+}
+.icon-footer ul li{
+    font-size: 16px;
+}
+.footer-company{
+    height: 20px;
+}
+.footer-company p{
+    font-size: 12px;
+}
+
+
+/* ==========Grid Shopping========== */
+section{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75px 0.5fr 0.1fr;
+    grid-template-areas: 
+    'top'
+    'left'
+    'button';       
+}
+.top{
+    grid-area: top;
+}
+.content-left{
+    grid-area: left;
+}
+.next-cancel{
+    grid-area: button;
+}
+
+/* ==========Shipping========== */
+/* Top */
+.top{
+    width: 100%;
+    height: 65px;    
+}
+.top div{
+    padding: 0px 2%;
+}
+.top div p{
+    font-size: 14px;
+}
+.shopping-cart p{
+    margin: 7px 0px ;
+}
+.shipping-detail p,
+.payment-option p{
+    margin: 7px 0px;
+}
+
+/* Content Left */
+.content-left{
+    margin: 10px 7% 0 7%;
+}
+.title-left{
+    padding-bottom: 10px;
+}
+.title-left p{
+    font-size: 28px;
+}
+
+/* Detail Content Left */
+.information .input_name,
+.information .country-city,
+.information .zip-phone{
+    display: block;
+}
+.choice .radio{
+    display: block;
+}
+.choice{
+    border-bottom: none;
+    margin-top: 0px;
+}
+
+/* Information */
+.information{
+    padding: 20px 0;
+}
+.input_wrap input[type="text"],
+.wrap input[type="text"],
+.wrap input[type="tel"]{
+    font-size: 14px;
+}
+.input_wrap{
+    margin-bottom: 5%;
+}
+.zip-phone .zip{
+    margin-bottom: 5%;
+}
+
+/* Choice */
+.new .regis,
+.test .the-flash{
+    font-size: 18px;
+}
+.new .detail-regis,
+.test .detail-the-flash{
+    font-size: 11px;
+}
+.new{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.test{
+    margin: 0;
+}
+.regis:before,
+.the-flash:before{
+    height: 13px;
+    width: 13px;
+}
+
+/* ปุ่ม Next & Cancel */
+#next{
+    font-size: 15px;
+}
+#cancel{
+    font-size: 15px;
+} 
+#piece{
+    padding: 5px;
+}
+}}}
 </style>
 </head>
 <body>
+
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -1118,7 +1261,7 @@ footer{
         </ul>
 
     </nav>
-    <!-- Java Nav -->
+
     <script>
         const menuBtn = document.querySelector('.checkbtn');
         let menuOpen = false;
@@ -1151,22 +1294,63 @@ footer{
 
         <div class="content-left">
             <div class="title-left">
-                <p>Shopping Cart</p>
+                <p>Shipping Detail</p>
             </div>
             <div class="detail">
-                <div class="pic">
-                    <img src="https://cdn.discordapp.com/attachments/821748947684294709/831157145734873129/1kg_cushion.jpg" alt="">
-                </div>
-                <div class="detail-product">
-                    <p class="product">Dried Samhao for package Cushioning (1 kilogram)</p>
-                    <p class="price">150 thb</p>
-                </div>
-                <!-- <div class="quantity">
-                    <p>Quantity</p>
+                <div class="information">
                     <form action="#">
-                        <input type="number" name="number" id="piece" min="1" max="20" value="1">
+                        <div class="input_name">
+                            <div class="input_wrap fname">
+                                <input type="text" id="fname" placeholder="First Name">
+                            </div>
+                            <div class="input_wrap">
+                                <input type="text" id="lname" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="input_wrap">
+                            <input type="text" id="address" placeholder="Address">
+                        </div>
+                        <div class="input_wrap">
+                            <input type="text" id="address2" placeholder="Address2">
+                        </div>
+                        <div class="country-city">
+                            <div class="input_wrap country">
+                                <input type="text" id="country" placeholder="Country">
+                            </div>
+                            <div class="input_wrap">
+                                <input type="text" id="city" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="zip-phone">
+                            <div class="wrap zip">
+                                <input type="text" id="zip" placeholder="Zip/Postal Code">
+                            </div>
+                            <div class="wrap">
+                                <input type="tel" id="phone" placeholder="Phone Number">
+                            </div>
+                        </div>
                     </form>
-                </div> -->
+                </div>
+                <div class="choice">
+                    <form action="#">
+                        <div class="radio">
+                            <div class="choice-regis">
+                                <input type="radio" name="shipping" id="registered" checked="checked">
+                                <div class="new" for="registered">
+                                    <label for="registered" class="regis">Registered Parcel</label>
+                                    <label for="registered" class="detail-regis">Between 2-5 working days</label>
+                                </div>
+                            </div>
+                            <div class="choice-flash">
+                                <input type="radio" name="shipping" id="the-flash">
+                                <div class="test" for="the-flash">
+                                    <label for="the-flash" class="the-flash">Flash express/Kerry</label>
+                                    <label for="the-flash" class="detail-the-flash">24 hours from checkout</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -1175,13 +1359,29 @@ footer{
                 <p>Summary</p>
             </div>
             <div class="detail-summary">
+                <div class="product">
+                    <div class="piece">
+                        <p>1 PCS</p>
+                    </div>
+                    <div class="pic">
+                        <img src="https://cdn.discordapp.com/attachments/821748947684294709/831513510823198720/5kg_fuel.jpg" alt="">
+                    </div>
+                    <div class="detail-product">
+                        <div class="detail">
+                            <p>Dried Samhao for package Cushioning (5 kilogram)</p>
+                        </div>
+                        <div class="price">
+                            <p>220 thb</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="coupon-code">
                     <p>enter coupon code</p>
                 </div>
                 <div class="sub-ship">
                     <div class="subtotal">
                         <p>subtotal</p>
-                        <p>150 thb</p>
+                        <p>220 thb</p>
                     </div>
                     <div class="shipping">
                         <p>shipping</p>
@@ -1190,206 +1390,22 @@ footer{
                 </div>
                 <div class="total">
                     <p>total</p>
-                    <p>150 thb</p>
+                    <p>220 thb</p>
                 </div>
             </div>
         </div>
 
         <div class="next-cancel">
             <form action="#">
-                <a href="shipping">
+                <a href="payment1">
                     <input type="button" value="Next" id="next">
                 </a>
-                <a href="detail">
+                <a href="product">
                     <input type="button" value="Cancel" id="cancel">
                 </a>
             </form>
         </div>
-
     </section>
-
-    <!-- Java Button -->
-    <script>
-        (function ($) {
-	$.fn.niceNumber = function (options) {
-		var defaults = {
-			autoSize: true,
-			autoSizeBuffer: 1,
-			buttonDecrement: '-',
-			buttonIncrement: '+',
-			buttonPosition: 'around',
-
-			/**
-				callbackFunction
-				@param {$input} currentInput - the input running the callback
-				@param {number} amount - the amount after increase/decrease
-				@param {object} settings - the passed niceNumber settings
-			**/
-			onDecrement: false,
-			onIncrement: false,
-		};
-		var settings = $.extend(defaults, options);
-
-		return this.each(function () {
-			var currentInput = this,
-				$currentInput = $(currentInput),
-				maxValue = $currentInput.attr('max'),
-				minValue = $currentInput.attr('min'),
-				attrMax = null,
-				attrMin = null;
-
-			// Skip already initialized input
-			if ($currentInput.attr('data-nice-number-initialized')) return;
-
-			// Handle max and min values
-			if (
-				maxValue !== undefined &&
-				maxValue !== false
-			) {
-				attrMax = parseFloat(maxValue);
-			}
-
-			if (
-				minValue !== undefined &&
-				minValue !== false
-			) {
-				attrMin = parseFloat(minValue);
-			}
-
-			// Fix issue with initial value being < min
-			if (attrMin && !currentInput.value) {
-				$currentInput.val(attrMin);
-			}
-
-			// Generate container
-			var $inputContainer = $('<div/>', {
-				class: 'nice-number',
-			}).insertAfter(currentInput);
-
-			// Generate interval (object so it is passed by reference)
-			var interval = {};
-
-			// Generate buttons
-			var $minusButton = $('<button/>')
-				.attr('type', 'button')
-				.html(settings.buttonDecrement)
-				.on('mousedown mouseup mouseleave', function (event) {
-					changeInterval(event.type, interval, function () {
-						var currentValue = parseFloat($currentInput.val() || 0);
-						if (
-							attrMin == null ||
-							attrMin < currentValue
-						) {
-							var newValue = currentValue - 1;
-							$currentInput.val(newValue);
-							if (settings.onDecrement) {
-								settings.onDecrement(
-									$currentInput,
-									newValue,
-									settings
-								);
-							}
-						}
-					});
-
-					// Trigger the input event here to avoid event spam
-					if (event.type == 'mouseup' || event.type == 'mouseleave') {
-						$currentInput.trigger('input');
-					}
-				});
-
-			var $plusButton = $('<button/>')
-				.attr('type', 'button')
-				.html(settings.buttonIncrement)
-				.on('mousedown mouseup mouseleave', function (event) {
-					changeInterval(event.type, interval, function () {
-						var currentValue = parseFloat($currentInput.val() || 0);
-						if (
-							attrMax == null ||
-							attrMax > currentValue
-						) {
-							var newValue = currentValue + 1;
-							$currentInput.val(newValue);
-							if (settings.onIncrement) {
-								settings.onIncrement(
-									$currentInput,
-									newValue,
-									settings
-								);
-							}
-						}
-					});
-
-					// Trigger the input event here to avoid event spam
-					if (event.type == 'mouseup' || event.type == 'mouseleave') {
-						$currentInput.trigger('input');
-					}
-				});
-
-			// Remember that we have initialized this input
-			$currentInput.attr('data-nice-number-initialized', true);
-
-			// Append elements
-			switch (settings.buttonPosition) {
-				case 'left':
-					$minusButton.appendTo($inputContainer);
-					$plusButton.appendTo($inputContainer);
-					$currentInput.appendTo($inputContainer);
-					break;
-				case 'right':
-					$currentInput.appendTo($inputContainer);
-					$minusButton.appendTo($inputContainer);
-					$plusButton.appendTo($inputContainer);
-					break;
-				case 'around':
-				default:
-					$minusButton.appendTo($inputContainer);
-					$currentInput.appendTo($inputContainer);
-					$plusButton.appendTo($inputContainer);
-					break;
-			}
-
-			// Nicely size input
-			if (settings.autoSize) {
-				$currentInput.width(
-					$currentInput.val().length + settings.autoSizeBuffer + '5px'
-				);
-				$currentInput.on('keyup input', function () {
-					$currentInput.animate(
-						{
-							width:
-								$currentInput.val().length +
-								settings.autoSizeBuffer +
-								'5px'
-						},
-						200
-					);
-				});
-			}
-		});
-	};
-
-	function changeInterval(eventType, interval, callback) {
-		if (eventType == 'mousedown') {
-			interval.timeout = setTimeout(function () {
-				interval.actualInterval = setInterval(function () {
-					callback();
-				}, 100);
-			}, 200);
-			callback();
-		} else {
-			if (interval.timeout) {
-				clearTimeout(interval.timeout);
-			}
-			if (interval.actualInterval) {
-				clearInterval(interval.actualInterval);
-			}
-		}
-	}
-})(jQuery);
-
-
-    </script>
 
     <footer>
         <div class="footer">
@@ -1425,6 +1441,6 @@ footer{
         </div>
 
     </footer>
-        
+
 </body>
 </html>

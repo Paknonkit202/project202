@@ -43,4 +43,16 @@ def thankyou(request):
 def contact(request):
     return render(request,'contact.html')
 
+def detail1(request):
+    return render(request,'detail1.html')
+
+def shopping1(request):
+    return render(request,'shopping1.html')
+
+def shipping1(request):
+    return render(request,'shipping1.html')
+
+def payment1(request):
+    return render(request,'payment1.html')
+
 

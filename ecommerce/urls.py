@@ -28,4 +28,8 @@ urlpatterns = [
     path('payment',views.payment),
     path('thankyou',views.thankyou),
     path('contact',views.contact),
+    path('detail1',views.detail1),
+    path('shopping1',views.shopping1),
+    path('shipping1',views.shipping1),
+    path('payment1',views.payment1),
 ]
