@@ -19,7 +19,7 @@ from store import views
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('home',views.homepage),
+    path('homepage',views.homepage),
     path('signin',views.signin),
     path('product',views.product),
     path('detail',views.detail),
