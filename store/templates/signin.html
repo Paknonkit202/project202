@@ -853,8 +853,13 @@ button i{
             <li><a class="show-dt" href="#">
                     <i class="fa fa-shopping-cart"></i> My Cart
                 </a></li>
-            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                {% if user.is_authenticated %}
+                <li><a class="show-dt" href="/logout"> {{user.username}} &verbar; LOGOUT
                 </a></li>
+                {% else %}
+            <li><a class="show-dt" href="/signin">Log in &verbar; Register
+                </a></li>
+                {% endif%}
         </ul>
 
     </nav>
@@ -881,7 +886,7 @@ button i{
                     <div class="title">
                         <p>Sign In</p>
                     </div>
-                    <input type="text" placeholder="E-mail" name="username" required>
+                    <input type="text" placeholder="Username" name="username" required>
                     <input type="password" placeholder="Password" name="password-login" required>
                     <button type="submit">Sign In</button>
                     <div class="line-or"></div>

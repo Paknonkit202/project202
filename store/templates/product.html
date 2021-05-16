@@ -818,8 +818,13 @@
             <li><a class="show-dt" href="#">
                     <i class="fa fa-shopping-cart"></i> My Cart
                 </a></li>
-            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                {% if user.is_authenticated %}
+                <li><a class="show-dt" href="/logout"> {{user.username}} &verbar; LOGOUT
                 </a></li>
+                {% else %}
+            <li><a class="show-dt" href="/signin">Log in &verbar; Register
+                </a></li>
+                {% endif%}
         </ul>
         </div>
     </nav>
