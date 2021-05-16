@@ -1685,15 +1685,20 @@
             <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
             <li><a class="show-mb" href="#">About Us</a></li>
             <li><a class="show-mb" href="#">Contact Us</a></li>
-            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="/">Home</a></li>
             <li><a class="show-dt" href="product">Shop</a></li>
             <li><a class="show-dt" href="#1">About</a></li>
             <li><a class="show-dt" href="contact">Contact</a></li>
             <li><a class="show-dt" href="#">
                     <i class="fa fa-shopping-cart"></i> My Cart
                 </a></li>
-            <li><a class="show-dt" href="signin">Log in &verbar; Register
+                {% if user.is_authenticated %}
+                <li><a class="show-dt" href="/logout"> {{user.username}} &verbar; LOGOUT
                 </a></li>
+                {% else %}
+            <li><a class="show-dt" href="/signin">Log in &verbar; Register
+                </a></li>
+                {% endif%}
         </ul>
     </nav>
     <script src="navbar.js"></script>

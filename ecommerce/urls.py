@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from store import views
+from django.conf.urls import url
+from django.conf import settings
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('homepage',views.homepage),
+    path('',views.homepage),
     path('signin',views.signin),
     path('product',views.product),
     path('detail',views.detail),
@@ -32,4 +35,7 @@ urlpatterns = [
     path('shopping1',views.shopping1),
     path('shipping1',views.shipping1),
     path('payment1',views.payment1),
+    path('logout',views.logout),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+
 ]

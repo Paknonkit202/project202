@@ -846,7 +846,7 @@ button i{
             <li><a class="show-mb" href="#">dried samhao for fuel</a></li>
             <li><a class="show-mb" href="#">About Us</a></li>
             <li><a class="show-mb" href="#">Contact Us</a></li>
-            <li><a class="show-dt" href="homepage">Home</a></li>
+            <li><a class="show-dt" href="/">Home</a></li>
             <li><a class="show-dt" href="product">Shop</a></li>
             <li><a class="show-dt" href="#1">About</a></li>
             <li><a class="show-dt" href="contact">Contact</a></li>
@@ -902,10 +902,11 @@ button i{
 
             <div class="register">
                 <form action="#" class="register-form" method="POST">
+                    {% csrf_token %}
                     <div class="title">
                         <p>Register</p>
                     </div>
-                    <input type="email" placeholder="E-mail" name="email">
+                    <input type="text" placeholder="E-mail" name="username_register">
                     <input type="password" placeholder="Password" name="password">
                     <input type="password" placeholder="Confirm Password" name="conpassword">
                     <button type="submit">Register</button>

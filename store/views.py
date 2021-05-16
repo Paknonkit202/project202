@@ -17,11 +17,28 @@ def signin(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password-login")
+        username_register = request.POST.get("username_register")
+        password_register = request.POST.get("password")
+        confirmpassword = request.POST.get("conpassword")
         user = authenticate(username=username, password=password)
-        login(request, user)
-        return render(request,'homepage.html')
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return redirect('/')
+            else:
+                return redirect('/signin')
+        # if password_register==confirmpassword:
+        #     if User.objects.filter(username=username_register).exists():
+        #         return redirect('/signin')
+        #     else:
+        #         new_user= User.objects.create_user(username=username_register,password=password_register)
+        #         new_user.save()
+        #         auth.login(request,new_user)
+        #         return redirect('/')
     return render(request,'signin.html')
-
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
 def product(request):
     return render(request,'product.html')
 
